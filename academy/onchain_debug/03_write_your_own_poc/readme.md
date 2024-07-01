@@ -90,7 +90,7 @@ uint256 ETH_Price = UniV2_USDC_Reserve / UniV2_ETH_Reserve;
 
 ## 手把手撰寫 PoC - 以 EGD Finance 為例
 
-### Step1: Infomation gathering
+### Step1: Information gathering
 
 當攻擊發生時，通常 Twitter 會是安全分析師的主戰場，會有各路大佬在 Twitter 上發布自己對於攻擊事件的最新發現。
 
@@ -570,7 +570,7 @@ Logs:
 Test result: ok. 1 passed; 0 failed; finished in 1.66s
 ```
 
-> 註: DeFiHackLabs 提供的 EGD-Finance.exp.sol 有 Reproduce 攻擊者的前置 Stacking 作業。
+> 註: DeFiHackLabs 提供的 EGD-Finance.exp.sol 有 Reproduce 攻擊者的前置 Staking 作業。
 >
 > 本教程未涵蓋到前置動作，你可以自己練習看看！
 > Attacker Stack Tx: 0x4a66d01a017158ff38d6a88db98ba78435c606be57ca6df36033db4d9514f9f8
