@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-578 incidents included.
+580 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -48,6 +48,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20250728 SuperRare](#20250728-superrare---access-control)
+
 [20250724 SWAPPStaking](#20250724-swappstaking---incorrect-reward-calculation)
 
 [20250709 GMX](#20250709-gmx---share-price-manipulation)
@@ -1153,6 +1155,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20210804 WaultFinance](past/2021/README.md#20210804-waultfinace---flashloan-price-manipulation)
 
+[20210804 Popsicle](past/2021/README.md#20210804-popsicle---repeated-reward-claim---logic-flaw)
+
 [20210728 Levyathan Finance](past/2021/README.md#20210728-levyathan-finance---i-lost-keys-and-minting-ii-vulnerable-emergencywithdraw)
 
 [20210710 Chainswap](past/2021/README.md#20210710-chainswap---bridge-logic-flaw)
@@ -1245,6 +1249,21 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 ---
 
 ### List of DeFi Hacks & POCs
+
+### 20250728 SuperRare - Access Control
+
+### Lost: 730K USD
+
+```sh
+forge test --contracts ./src/test/2025-07/SuperRare_exp.sol -vvv
+```
+#### Contract
+[SuperRare_exp.sol](src/test/2025-07/SuperRare_exp.sol)
+### Link reference
+
+https://x.com/SlowMist_Team/status/1949770231733530682
+
+---
 
 ### 20250724 SWAPPStaking - Incorrect Reward calculation
 
