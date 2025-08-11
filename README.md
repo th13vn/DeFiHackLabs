@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-589 incidents included.
+592 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -73,6 +73,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250620 Gangsterfinance](#20250620-gangsterfinance---incorrect-dividends)
 
+[20250619 BankrollStack](#20250619-bankrollstack---incorrect-dividends-calculation)
+
 [20250619 BankrollNetwork](#20250619-bankrollnetwork---incorrect-dividends-calculation)
 
 [20250617 MetaPool](#20250617-metapool---access-control)
@@ -80,6 +82,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20250526 YDT](#20250526-YDT---logic-flaw)
 
 [20250518 KRC](#20250518-krc---deflationary-token)
+
+[20250514 Unwarp](#20250514-unwarp---lack-of-access-control)
 
 [20250511 MBUToken](#20250511-mbutoken---price-manipulation-not-confirmed)
 
@@ -104,6 +108,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20250316 wKeyDAO](#20250316-wkeydao---unprotected-function)
 
 [20250314 H2O](#20250314-h2o---weak-random-mint)
+
+[20250307 SBRToken](#20250307-sbr-token---price-manipulation)
 
 [20250305 1inch Fusion V1 Settlement](#20250305-1inch-fusionv1-settlement---arbitrary-yul-calldata)
 
@@ -1389,6 +1395,19 @@ https://t.me/defimon_alerts/1323
 
 ---
 
+### 20250619 BankrollStack - Incorrect dividends calculation
+
+### Lost: 5k USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/BankrollStack_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[BankrollStack](src/test/2025-06/BankrollStack_exp.sol)
+
+---
+
 ### 20250619 BankrollNetwork - Incorrect dividends calculation
 
 ### Lost: 24.5 WBNB
@@ -1450,6 +1469,20 @@ forge test --contracts ./src/test/2025-05/KRC_token_exp.sol -vvv --evm-version s
 ### Link reference
 
 https://x.com/CertikAIAgent/status/1924280794916536765
+
+---
+
+### 20250514 Unwarp - lack-of-access-control
+
+### Lost: 9K USD
+
+
+```sh
+forge test --contracts ./src/test/2025-05/Unwarp_exp.sol -vvv
+```
+#### Contract
+[Unwarp_exp.sol](src/test/2025-05/Unwarp_exp.sol)
+### Link reference
 
 ---
 
@@ -1663,6 +1696,22 @@ forge test --contracts ./src/test/2025-03/H2O_exp.sol -vvv --evm-version cancun
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1900525198157205692
+
+---
+
+### 20250307 SBR Token - Price Manipulation
+
+### Lost: ~ $18.4K
+
+```sh
+forge test --contracts ./src/test/2025-03/SBRToken_exp.sol -vvv
+```
+#### Contract
+[SBRToken_exp](./src/test/2025-03/SBRToken_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1897826817429442652
 
 ---
 
