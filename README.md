@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-592 incidents included.
+596 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -59,6 +59,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20250811 WXC](#20250811-wxc---incorrect-token-burn-mechanism)
+
 [20250728 SuperRare](#20250728-superrare---access-control)
 
 [20250726 MulticallWithETH](#20250726-MulticallWithETH---arbitrary-call)
@@ -121,6 +123,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250211 FourMeme](#20250211-fourmeme---logic-flaw)
 
+[20250208 Peapods Finance](#20250208-peapods-finance---price-manipulation)
+
 [20250123 ODOS](#20250123-odos---invalid-signature-verification)
 
 [20250121 Ast](#20250121-ast---price-manipulation)
@@ -131,9 +135,13 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250113 Mosca2](#20250113-mosca2---logic-flaw)
 
+[20250112 Unilend](#20250112-unilend---logic-flaw)
+
 [20250111 RoulettePotV2](#20250111-roulettepotv2---price-manipulation)
 
 [20250110 JPulsepot](#20250110-jpulsepot---logic-flaw)
+
+[20250108 HORS](#20250108-hors---access-control)
 
 [20250108 LPMine](#20250108-lpmine---incorrect-reward-calculation)
 
@@ -1285,6 +1293,22 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20250811 WXC - Incorrect token burn mechanism
+
+### Lost: 37.5 WBNB
+
+
+```sh
+forge test --contracts ./src/test/2025-08/WXC_Token -vvv --evm-version shanghai
+```
+#### Contract
+[WXC_Token](src/test/2025-08/WXC_Token)
+### Link reference
+
+https://x.com/TenArmorAlert/status/1954774967481962832
+
+---
+
 ### 20250728 SuperRare - Access Control
 
 ### Lost: 730K USD
@@ -1801,6 +1825,22 @@ forge test --contracts ./src/test/2025-02/FourMeme_exp.sol -vvv --evm-version sh
 
 https://www.chaincatcher.com/en/article/2167296
 
+---
+
+### 20250208 Peapods Finance - Price Manipulation
+
+### Lost: ~ $3,500
+
+```sh
+forge test --contracts ./src/test/2025-02/PeapodsFinance_exp.sol -vvv
+```
+
+#### Contract
+[PeapodsFinance_exp.sol](src/test/2025-02/PeapodsFinance_exp.sol)
+
+### Link reference
+
+https://blog.solidityscan.com/peapods-finance-hack-analysis-bdc5432107a5
 
 ---
 
@@ -1880,6 +1920,22 @@ https://x.com/TenArmorAlert/status/1878699517450883407
 
 ---
 
+### 20250112 Unilend - Logic Flaw
+
+### Lost: 60 stETH
+
+
+```sh
+forge test --contracts ./src/test/2025-01/Unilend_exp.sol -vvv
+```
+#### Contract
+[Unilend_exp.sol](src/test/2025-01/Unilend_exp.sol)
+### Link reference
+
+https://slowmist.medium.com/analysis-of-the-unilend-hack-90022fa35a54
+
+---
+
 ### 20250111 RoulettePotV2 - Price Manipulation
 
 ### Lost: ~28K
@@ -1907,6 +1963,23 @@ forge test --contracts ./src/test/2025-01/JPulsepot_exp.sol -vvv --evm-version s
 ### Link reference
 
 https://x.com/CertiKAlert/status/1877662352834793639
+
+---
+
+### 20250108 HORS - Access Control
+
+### Lost: 14.8 WBNB
+
+
+```sh
+forge test --contracts ./src/test/2025-01/HORS_exp.sol -vvv
+```
+#### Contract
+[HORS_exp.sol](src/test/2025-01/HORS_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1877032470098428058
 
 ---
 
