@@ -136,6 +136,24 @@ https://twitter.com/Bcpaintball26/status/1857865758551805976
 
 ---
 
+### 20241117 MFT - Logic Flaw
+
+### Lost: 33.7k USD
+
+```sh
+forge test --contracts ./../../src/test/2024-11/MFT_exp.sol -vvv
+```
+
+#### Contract
+
+[MFT_exp.sol](../../src/test/2024-11/MFT_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1858351609371406617
+
+---
+
 ### 20241114 vETH - Vulnerable Price Dependency
 
 ### Lost: 447k
@@ -414,6 +432,25 @@ https://x.com/Phalcon_xyz/status/1838042368018137547
 
 ---
 
+### 20240920 Shezmu - Access Control
+
+### Lost: 4.9M USD
+
+
+```sh
+forge test --contracts ./../../src/test/2024-09/Shezmu_exp.sol -vvv
+```
+
+#### Contract
+
+[Shezmu_exp.sol](../../src/test/2024-09/Shezmu_exp.sol)
+
+### Link reference
+
+https://x.com/shoucccc/status/1837228053862437244
+
+---
+
 ### 20240913 OTSeaStaking - Logic Flaw
 
 ### Lost: 26k
@@ -469,6 +506,21 @@ https://x.com/AnciliaInc/status/1831080555292856476
 https://x.com/hackenclub/status/1831383106554573099
 
 post-morten: https://x.com/Penpiexyz_io/status/1831462760787452240
+
+---
+
+### 20240902 Pythia - Logic Flaw
+
+### Lost: 21 ETH
+
+```sh
+forge test --contracts ./../../src/test/2024-09/Pythia_exp.sol -vvv
+```
+#### Contract
+[Pythia_exp.sol](../../src/test/2024-09/Pythia_exp.sol)
+### Link reference
+
+https://x.com/QuillAudits_AI/status/1830976830607892649
 
 ---
 
