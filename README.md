@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-605 incidents included.
+609 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -60,6 +60,10 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ## List of Past DeFi Incidents
 
+[20250816 d3xai](#20250816-d3xai---price-manipulation)
+
+[20250815 SizeCredit](#20250815-sizecredit---access-control)
+
 [20250813 coinbase](#20250813-coinbase---misconfiguration)
 
 [20250813 Grizzifi](#20250813-grizzifi---logic-flaw)
@@ -102,6 +106,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250426 ImpermaxV3](#20250426-impermaxv3---floashloan)
 
+[20250404 AIRWA](#20250404-airwa---access-control)
+
 [20250418 BTNFT](#20250418-btnft---claim-rewards-without-protection)
 
 [20250416 YVToken](#20250416-yvtoken---not-slippage-protection)
@@ -109,6 +115,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20250330 LeverageSIR](#20250330-leveragesir---storage-slot1-collision)
 
 [20250328 Alkimiya_IO](#20250328-alkimiya_io---unsafecast)
+
+[20200327 YziAIToken](#20250327-yziai---rug-pull)
 
 [20250320 BBXToken](#20250320-bbxtoken---price-manipulation)
 
@@ -1312,6 +1320,41 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20250816 d3xai - Price Manipulation
+
+### Lost: 190 BNB
+
+```sh
+forge test --contracts ./src/test/2025-08/d3xai_exp.sol -vvv
+```
+#### Contract
+
+[d3xai_exp.sol](src/test/2025-08/d3xai_exp.sol)
+
+### Link reference
+
+https://x.com/suplabsyi/status/1956695597546893598
+
+---
+
+### 20250815 SizeCredit - Access Control
+
+### Lost: 19.7k USD
+
+```sh
+forge test --contracts ./src/test/2025-08/SizeCredit_exp.sol -vvv
+```
+
+#### Contract
+
+[SizeCredit_exp.sol](src/test/2025-08/SizeCredit_exp.sol)
+
+### Link reference
+
+https://x.com/SuplabsYi/status/1956306748073230785
+
+---
+
 ### 20250813 coinbase - Misconfiguration
 
 ### Lost: 300k USD
@@ -1685,8 +1728,23 @@ https://x.com/TenArmorAlert/status/1912684902664782087
 
 ---
 
+### 20250404 AIRWA - Access Control
+
+### Lost: $33.6K
+
+```sh
+forge test --contracts ./src/test/2025-04/AIRWA_exp.sol -vvv
+```
+
+#### Contract
+[AIRWA_exp](src/test/2025-04/AIRWA_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1908086092772900909
 
 
+---
 
 ### 20250330 LeverageSIR - Storage SLOT1 collision
 
@@ -1722,6 +1780,23 @@ forge test --contracts ./src/test/2025-03/Alkimiya_io_exp.sol -vvv
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1906371419807568119
+
+---
+
+### 20250327 YziAI - Rug Pull
+
+### Lost: ~ $239.4K
+
+```sh
+forge test --contracts ./src/test/2025-03/YziAIToken_exp.sol -vvv
+```
+
+#### Contract
+[YziAIToken_exp.sol](src/test/2025-03/YziAIToken_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1905528525785805027
 
 ---
 
