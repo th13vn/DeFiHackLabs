@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-610 incidents included.
+613 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -59,8 +59,9 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
-
 [20250816 d3xai](#20250816-d3xai---price-manipulation)
+
+[20250815 PDZ](#20250815-pdz---price-manipulation)
 
 [20250815 SizeCredit](#20250815-sizecredit---access-control)
 
@@ -80,7 +81,11 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250720 Stepp2p](#20250720-stepp2p---logic-flaw)
 
+[20250716 VDS](#20250716-vds---logic-flaw)
+
 [20250709 GMX](#20250709-gmx---share-price-manipulation)
+
+[20250705 RANT](#20250705-rant---logic-flaw)
 
 [20250626 ResupplyFi](#20250626-resupplyfi---share-price-manipulation)
 
@@ -1322,6 +1327,24 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20250815 PDZ - Price Manipulation
+
+### Lost: 3.3 BNB
+
+
+```sh
+forge test --contracts ./src/test/2025-08/PDZ_exp.sol -vvv
+```
+#### Contract
+
+[PDZ_exp.sol](src/test/2025-08/PDZ_exp.sol)
+
+### Link reference
+
+https://x.com/tikkalaresearch/status/1957500585965678828
+
+---
+
 ### 20250816 d3xai - Price Manipulation
 
 ### Lost: 190 BNB
@@ -1416,7 +1439,7 @@ https://x.com/SuplabsYi/status/1955230173365961128
 forge test --contracts ./src/test/2025-08/WXC_Token -vvv --evm-version shanghai
 ```
 #### Contract
-[WXC_Token](src/test/2025-08/WXC_Token)
+[WXC_Token](src/test/2025-08/WXC_Token_exp.sol)
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1954774967481962832
@@ -1485,6 +1508,24 @@ https://x.com/TenArmorAlert/status/1946887946877149520
 
 ---
 
+
+### 20250716 VDS - Logic Flaw
+
+### Lost: 13k USD
+
+```sh
+forge test --contracts ./src/test/2025-07/VDS_exp.sol -vvv
+```
+#### Contract
+
+[VDS_exp.sol](src/test/2025-07/VDS_exp.sol)
+
+### Link reference
+
+https://x.com/SlowMist_Team/status/1945672192471302645
+
+---
+
 ### 20250709 GMX - Share price manipulation
 
 ### Lost: 41M USD
@@ -1498,6 +1539,23 @@ forge test --contracts ./src/test/2025-07/gmx_exp.sol -vvv
 ### Link reference
 
 https://x.com/GMX_IO/status/1943336664102756471
+
+---
+
+### 20250705 RANT - Logic Flaw
+
+### Lost: ~ $204K
+
+```sh
+forge test --contracts ./src/test/2025-07/RANTToken_exp.sol -vvv
+```
+#### Contract
+[RANTToken_exp.sol](src/test/2025-07/RANTToken_exp.sol)
+
+### Link reference
+
+- https://x.com/Phalcon_xyz/status/1941788315549946225
+- https://x.com/AgentLISA_ai/status/1942162643437203531
 
 ---
 
