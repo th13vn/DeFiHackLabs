@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-613 incidents included.
+614 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -59,6 +59,9 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+
+[20250820 0x8d2e](#20250820-0x8d2e---access-control)
+
 [20250816 d3xai](#20250816-d3xai---price-manipulation)
 
 [20250815 PDZ](#20250815-pdz---price-manipulation)
@@ -239,11 +242,11 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20240902 Pythia](past/2024/README.md#20240902-pythia---logic-flaw)
 
+[20240828 AAVE](past/2024/README.md#20240828-aave---arbitrary-call-error)
+
 [20240816 Zenterest](past/2024/README.md#20240816-Zenterest---price-out-of-date)
 
 [20240816 OMPxContract](past/2024/README.md#20240816-ompx-contract---flashloan)
-
-[20240828 AAVE](past/2024/README.md#20240828-aave---arbitrary-call-error)
 
 [20240814 YodlRouter](past/2024/README.md#20240814-yodlrouter---arbitrary-call)
 
@@ -1327,21 +1330,21 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
-### 20250815 PDZ - Price Manipulation
+### 20250820 0x8d2e - Access Control
 
-### Lost: 3.3 BNB
-
+### Lost: 40k USDC
 
 ```sh
-forge test --contracts ./src/test/2025-08/PDZ_exp.sol -vvv
+forge test --contracts ./src/test/2025-08/0x8d2e_exp.sol -vvv --evm-version cancun
 ```
+
 #### Contract
 
-[PDZ_exp.sol](src/test/2025-08/PDZ_exp.sol)
+[0x8d2e_exp.sol](src/test/2025-08/0x8d2e_exp.sol)
 
 ### Link reference
 
-https://x.com/tikkalaresearch/status/1957500585965678828
+https://x.com/TenArmorAlert/status/1958354933247590450
 
 ---
 
@@ -1359,6 +1362,24 @@ forge test --contracts ./src/test/2025-08/d3xai_exp.sol -vvv
 ### Link reference
 
 https://x.com/suplabsyi/status/1956695597546893598
+
+---
+
+### 20250815 PDZ - Price Manipulation
+
+### Lost: 3.3 BNB
+
+
+```sh
+forge test --contracts ./src/test/2025-08/PDZ_exp.sol -vvv
+```
+#### Contract
+
+[PDZ_exp.sol](src/test/2025-08/PDZ_exp.sol)
+
+### Link reference
+
+https://x.com/tikkalaresearch/status/1957500585965678828
 
 ---
 
@@ -1584,7 +1605,7 @@ https://x.com/ResupplyFi/status/1938927974272938420
 forge test --contracts ./src/test/2025-06/Gangsterfinance.sol -vvv --evm-version shanghai
 ```
 #### Contract
-[Gangsterfinance](src/test/2025-06/Gangsterfinance.sol)
+[Gangsterfinance](src/test/2025-06/Gangsterfinance_exp.sol)
 ### Link reference
 
 https://t.me/defimon_alerts/1323
@@ -1661,7 +1682,7 @@ https://x.com/TenArmorAlert/status/1926587721885040686
 forge test --contracts ./src/test/2025-05/KRC_token_exp.sol -vvv --evm-version shanghai
 ```
 #### Contract
-[KRC_token_exp](src/test/2025-05/KRC_token_exp)
+[KRCToken_pair_exp](src/test/2025-05/KRCToken_pair_exp.sol)
 ### Link reference
 
 https://x.com/CertikAIAgent/status/1924280794916536765
