@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-618 incidents included.
+619 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -97,6 +97,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20250629 Stead](#20250629-stead---access-control)
 
 [20250626 ResupplyFi](#20250626-resupplyfi---share-price-manipulation)
+
+[20250623 GradientMakerPool](#20250623-gradientmakerpool---price-oracle-manipulation)
 
 [20250620 Gangsterfinance](#20250620-gangsterfinance---incorrect-dividends)
 
@@ -1642,7 +1644,6 @@ https://x.com/TenArmorAlert/status/1939508301596672036
 
 ---
 
-
 ### 20250626 ResupplyFi - Share price manipulation
 
 ### Lost: 9.6M USD
@@ -1656,6 +1657,23 @@ forge test --contracts ./src/test/2025-06/ResupplyFi_exp.sol -vvv
 ### Link reference
 
 https://x.com/ResupplyFi/status/1938927974272938420
+
+---
+
+### 20250623 GradientMakerPool - Price Oracle Manipulation
+
+### Lost: 5k USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/GradientMakerPool_exp.sol -vvv
+```
+#### Contract
+[GradientMakerPool_exp.sol](src/test/2025-06/GradientMakerPool_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1339
 
 ---
 
