@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-620 incidents included.
+625 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -60,7 +60,11 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ## List of Past DeFi Incidents
 
+[20250827 0xf340](#20250827-0xf340---access-control)
+
 [20250823 ABCCApp](#20250823-abccapp---lack-of-access-control)
+
+[20250820 MulticallWithXera](#20250820-multicallwithxera---access-control)
 
 [20250820 0x8d2e](#20250820-0x8d2e---access-control)
 
@@ -112,6 +116,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250526 YDT](#20250526-YDT---logic-flaw)
 
+[20250524 RICE](#20250524-rice---lack-of-access-control)
+
 [20250518 KRC](#20250518-krc---deflationary-token)
 
 [20250514 Unwarp](#20250514-unwarp---lack-of-access-control)
@@ -149,6 +155,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20250307 SBRToken](#20250307-sbr-token---price-manipulation)
 
 [20250305 1inch Fusion V1 Settlement](#20250305-1inch-fusionv1-settlement---arbitrary-yul-calldata)
+
+[20250304 Pump](#20250304-pump---not-slippage-protection)
 
 [20250223 HegicOptions](#20250223-hegicoptions---business-logic-flaw)
 
@@ -273,6 +281,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20240724 Spectra_finance](past/2024/README.md#20240724-spectra_finance---incorrect-input-validation)
 
 [20240723 MEVbot_0xdd7c](past/2024/README.md#20240723-mevbot_0xdd7c---incorrect-input-validation)
+
+[20250717 WETC](#20250717-wetc---incorrect-burn-logic)
 
 [20240716 Lifiprotocol](past/2024/README.md#20240716-lifiprotocol---incorrect-input-validation)
 
@@ -1342,6 +1352,23 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20250827 0xf340 - Access Control
+
+### Lost: 4k USD
+
+
+```sh
+forge test --contracts ./src/test/2025-08/0xf340_exp.sol -vvv
+```
+#### Contract
+[0xf340_exp.sol](src/test/2025-08/0xf340_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1733
+
+---
+
 ### 20250823 ABCCApp - Lack of Access Control
 
 ### Lost: ~ $10.1K
@@ -1357,6 +1384,23 @@ forge test --contracts ./src/test/2025-08/ABCCApp_exp.sol -vvv
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1959457212914352530
+
+---
+
+### 20250820 MulticallWithXera - Access Control
+
+### Lost: 17k USD
+
+
+```sh
+forge test --contracts ./src/test/2025-08/MulticallWithXera_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[MulticallWithXera_exp.sol](src/test/2025-08/MulticallWithXera_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1958354933247590450
 
 ---
 
@@ -1577,6 +1621,23 @@ https://x.com/TenArmorAlert/status/1946887946877149520
 
 ---
 
+### 20250717 WETC - Incorrect Burn Logic
+
+### Lost: 101k USD
+
+
+```sh
+forge test --contracts ./src/test/2025-07/WETC_Token_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[WETC_Token_exp.sol](src/test/2025-07/WETC_Token_exp.sol)
+
+### Link reference
+
+https://t.me/evmhacks/78?single
+
+---
+
 
 ### 20250716 VDS - Logic Flaw
 
@@ -1771,6 +1832,23 @@ forge test --contracts ./src/test/2025-05/YDTtoken_exp.sol -vvv --evm-version ca
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1926587721885040686
+
+---
+
+### 20250524 RICE - Lack of Access Control
+
+### Lost: ~ $88.1K
+
+```sh
+forge test --contracts ./src/test/2025-05/RICE_exp.sol -vvv
+```
+
+#### Contract
+[RICE_exp.sol](src/test/2025-05/RICE_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1926461662644633770
 
 ---
 
@@ -2095,6 +2173,24 @@ forge test --contracts ./src/test/2025-03/OneInchFusionV1SettlementHack.sol -vvv
 ### Link reference
 
 [linkhere](https://blog.decurity.io/yul-calldata-corruption-1inch-postmortem-a7ea7a53bfd9)
+
+---
+
+### 20250304 Pump - Not Slippage Protection
+
+### Lost: ~ $6.4K
+
+```sh
+forge test --contracts ./src/test/2025-03/Pump_exp.sol -vvv
+```
+
+#### Contract
+
+[Pump_exp.sol](src/test/2025-03/Pump_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1897115993962635520
 
 ---
 
