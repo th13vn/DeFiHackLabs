@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-643 incidents included.
+665 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -59,6 +59,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+
+[20250831 Hexotic](#20250831-hexotic---incorrect-input-validation)
 
 [20250827 0xf340](#20250827-0xf340---access-control)
 
@@ -154,6 +156,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250416 YVToken](#20250416-yvtoken---not-slippage-protection)
 
+[20250411 Unverified 0x6077](#20250411-unverified-0x6077---lack-of-access-control)
+
 [20250330 LeverageSIR](#20250330-leveragesir---storage-slot1-collision)
 
 [20250328 Alkimiya_IO](#20250328-alkimiya_io---unsafecast)
@@ -179,6 +183,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20250304 Pump](#20250304-pump---not-slippage-protection)
 
 [20250223 HegicOptions](#20250223-hegicoptions---business-logic-flaw)
+
+[20250222 Unverified_35bc](#20250222-Unverified_35bc---reentrancy)
 
 [20250221 StepHeroNFTs](#20250221-stepheronfts---reentrancy-on-sell-nft)
 
@@ -222,9 +228,13 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 <details> <summary> 2024 </summary>
 
+[20241227 Bizness](past/2024/README.md#20241227-bizness---reentrancy)
+
 [20241223 Moonhacker](past/2024/README.md#20241223-moonhacker---improper-input-validation)
 
 [20241218 Slurpy](past/2024/README.md#20241218-slurpycoin---logic-flaw)
+
+[20241216 BTC24H](past/2024/README.md#20241216-btc24h---logic-flaw)
 
 [20241214 JHY](past/2024/README.md#20241214-jhy---logic-flaw)
 
@@ -236,9 +246,13 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20241126 NFTG](past/2024/README.md#20241126-NFTG---access-control)
 
+[20241124 Proxy_b7e1](past/2024/README.md#20241124-proxy_b7e1---logic-flaw)
+
 [20241123 Ak1111](past/2024/README.md#20241123-ak1111---access-control)
 
 [20241121 Matez](past/2024/README.md#20241121-matez---integer-truncation)
+
+[20241120 MainnetSettler](past/2024/README.md#20241120-mainnetsettler---access-control)
 
 [20241119 PolterFinance](past/2024/README.md#20241119-polterfinance---flashloan-attack)
 
@@ -251,6 +265,14 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20241109 X319](past/2024/README.md#20241109-X319---access-control)
 
 [20241107 ChiSale](past/2024/README.md#20241107-ChiSale---logic-flaw)
+
+[20241107 CoW](past/2024/README.md#20241107-CoW---access-control)
+
+[20241107 UniV2](past/2024/README.md#20241107-UniV2---rug-pull)
+
+[20241105 RPP](past/2024/README.md#20241105-rpp---logic-flaw)
+
+[20241029 BUBAI](past/2024/README.md#20241029-BUBAI---rug-pull)
 
 [20241026 CompoundFork](past/2024/README.md#20241026-compoundfork---flashloan-attack)
 
@@ -286,19 +308,41 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20240920 Shezmu](past/2024/README.md#20240920-shezmu---access-control)
 
+[20240918 Unverified_766a](past/2024/README.md#20240918-unverified_766a---access-control)
+
+[20240915 WXETA](past/2024/README.md#20240915-WXETA---Logic-Flaw)
+
+[20240913 Unverified_5697](past/2024/README.md#20240913-unverified_5697---access-control)
+
 [20240913 OTSeaStaking](past/2024/README.md#20240913-OTSeaStaking---Logic-Flaw)
 
+[20240912 Unverified_03f9](past/2024/README.md#20240912-Unverified_03f9---access-control)
+
+[20240911 INUMI](past/2024/README.md#20240911-INUMI---access-control)
+
+[20240911 INUMI_db27](past/2024/README.md#20240911-INUMI_db27---access-control)
+
+[20240911 AIRBTC](past/2024/README.md#20240911-AIRBTC---access-control)
+
 [20240910 Caterpillar_Coin_CUT](past/2024/README.md#20240910-Caterpillar_Coin_CUT---price-manipulation)
+
+[20240905 Unverified_a89f](past/2024/README.md#20240905-unverified_a89f---access-control)
 
 [20240905 PLN](past/2024/README.md#20240905-PLN---access-control)
 
 [20240905 HANAToken](past/2024/README.md#20240905-HANAToken---price-manipulation)
 
+[20240904 Unverified_16d0](past/2024/README.md#20240904-unverified_16d0---access-control)
+
 [20240903 Penpiexyz_io](past/2024/README.md#20240903-Penpiexyz_io---reentrancy-and-reward-manipulation)
 
 [20240902 Pythia](past/2024/README.md#20240902-pythia---logic-flaw)
 
+[20240828 Unverified_667d](past/2024/README.md#20240828-unverified_667d---access-control)
+
 [20240828 AAVE](past/2024/README.md#20240828-aave---arbitrary-call-error)
+
+[20240820 COCO](past/2024/README.md#20240820-coco---logic-flaw)
 
 [20240816 Zenterest](past/2024/README.md#20240816-Zenterest---price-out-of-date)
 
@@ -1388,6 +1432,23 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20250831 Hexotic - Incorrect Input Validation
+
+### Lost: 500 USD
+
+```sh
+forge test --contracts ./src/test/2025-08/Hexotic_exp.sol -vvv
+```
+#### Contract
+[Hexotic_exp.sol](src/test/2025-08/Hexotic_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1757
+
+---
+
+
 ### 20250827 0xf340 - Access Control
 
 ### Lost: 4k USD
@@ -2117,10 +2178,6 @@ https://x.com/TenArmorAlert/status/1913500336301502542
 
 ---
 
-
-
-
-
 ### 20250416 YVToken - Not Slippage Protection
 
 ### Lost: 15261.68240413121964707 BUSD
@@ -2152,6 +2209,21 @@ forge test --contracts ./src/test/2025-04/Roar_exp.sol -vvv
 ### Link reference
 
 https://x.com/CertiKAlert/status/1912430535999189042
+
+---
+
+### 20250411 Unverified 0x6077 - Lack of Access Control
+
+### Lost: ~ $62.3K
+
+```sh
+forge test --contracts ./src/test/2025-04/Unverified_6077_exp.sol -vvv
+```
+
+#### Contract
+[Unverified_6077_exp](src/test/2025-04/Unverified_6077_exp.sol)
+
+### Link reference
 
 ---
 
@@ -2406,6 +2478,25 @@ forge test --contracts ./src/test/2025-02/HegicOptions_exp.sol -vvv
 ### Link reference
 
  [Pending]
+
+
+---
+
+### 20250222 Unverified_35bc - Reentrancy
+
+### Lost : $6.7K
+
+```sh
+forge test --contracts ./src/test/2025-02/unverified_35bc_exp.sol -vvv
+```
+
+#### Contract
+[Unverified_35bc_exp.sol](src/test/2025-02/unverified_35bc_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1893333680417890648
+
 
 ---
 
