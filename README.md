@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-671 incidents included.
+672 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -57,6 +57,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20251104 Moonwell](#20251104-moonwell---faulty-oracle)
 
 [20251103 BalancerV2](#20251103-balancerv2---precision-loss)
+
+[20251020 SharwaFinance](##20251020-sharwafinance---post-insolvency-check)
 
 [20251007 TokenHolder](#20251007-tokenholder---access-control)
 
@@ -150,7 +152,7 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250426 Lifeprotocol](#20250426-lifeprotocol---price-manipulation)
 
-[20250426 ImpermaxV3](#20250426-impermaxv3---floashloan)
+[20250426 ImpermaxV3](#20250426-impermaxv3---flashloan-price-oracle-manipulation)
 
 [20250416 Roar](#20250416-roar---rug-pull)
 
@@ -1455,6 +1457,8 @@ https://x.com/CertiKAlert/status/1985620452992253973
 
 https://www.halborn.com/blog/post/explained-the-moonwell-hack-november-2025
 
+---
+
 ### 20251103 BalancerV2 - Precision Loss
 
 ### Lost: 120M USD
@@ -1473,6 +1477,23 @@ https://x.com/BlockSecTeam/status/1986057732810518640
 https://x.com/SlowMist_Team/status/1986379316935205299
 
 https://x.com/hklst4r/status/1985872151077953827
+
+---
+
+### 20251020 SharwaFinance - Post Insolvency Check
+
+### Lost: 146,000 USD
+
+```sh
+forge test --contracts ./src/test/2025-10/SharwaFinance_exp.sol -vvv
+```
+
+#### Contract
+[SharwaFinance_exp.sol](src/test/2025-10/SharwaFinance_exp.sol)
+
+### Link reference
+
+https://x.com/phalcon_xyz/status/1980219745480946087?s=46
 
 ---
 
@@ -2068,7 +2089,7 @@ https://x.com/peckshield/status/1934895187102454206
 
 ---
 
-### 20250612 AAVEBoost---logic-flaw
+### 20250612 AAVEBoost - Logic Flaw
 
 ### Lost: 14.8K USD
 
@@ -2084,7 +2105,7 @@ https://x.com/CertiKAlert/status/1933011428157563188
 
 ---
 
-### 20250610 Unverified_8490---access-control
+### 20250610 Unverified_8490 - Access Control
 
 ### Lost: 48.3K USD
 
@@ -2100,7 +2121,7 @@ https://x.com/TenArmorAlert/status/1932309011564781774
 
 ---
 
-### 20250528 Corkprotocol - access-control
+### 20250528 Corkprotocol - Access Control
 
 ### Lost: 12M USD
 
@@ -2264,7 +2285,7 @@ https://x.com/TenArmorAlert/status/1916312483792408688
 
 ---
 
-### 20250426 ImpermaxV3 - Floashloan
+### 20250426 ImpermaxV3 - FlashLoan Price Oracle Manipulation
 
 ### Lost: 62,628.66 USD
 
