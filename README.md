@@ -25,7 +25,7 @@ Notion: [101 root cause analysis of past DeFi hacked incidents](https://web3sec.
   
 ## Getting Started
 
-- Follow the [instructions](https://book.getfoundry.sh/getting-started/installation.html) to install [Foundry](https://github.com/foundry-rs/foundry).
+- Follow the [instructions](https://www.getfoundry.sh/introduction/getting-started) to install [Foundry](https://github.com/foundry-rs/foundry).
 
 - Clone and install dependencies:`git submodule update --init --recursive`
 - [Contributing Guidelines](https://github.com/SunWeb3Sec/DeFiHackLabs/blob/main/CONTRIBUTING.md)
@@ -1463,17 +1463,24 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 ### List of DeFi Hacks & POCs
 
 ### 20260120 SynapLogic - Business Logic Flaw
-### Lost: 27.6 ETH
+
+NOTICE: SynapLogic is totally a cheat contract, with backdoors, vulnerabilities and rug pulls.
+
+### Lost: 27.6 ETH & 3450 USDC
 
 ```sh
-BASE_ENDPOINT=XXX forge test -vvv --contracts ./src/test/2026-01/SynapLogic_exp.sol
+forge test -vvv --contracts ./src/test/2026-01/SynapLogic_exp.sol
 ```
 #### Contract
 [SynapLogic_exp.sol](src/test/2026-01/SynapLogic_exp.sol)
+
 ### Link reference
 https://x.com/TenArmorAlert/status/2013432861366292520?s=20
+
 https://x.com/hklst4r/status/2013440353844461979?s=20
+
 https://x.com/CertiKAlert/status/2013440963851755610?s=20
+
 https://x.com/nn0b0dyyy/status/2013445844394279260?s=20
 
 ### 20260120 Makina - Price Oracle Manipulation
@@ -1481,7 +1488,8 @@ https://x.com/nn0b0dyyy/status/2013445844394279260?s=20
 ### Lost: 5.1M USD
 
 ```sh
-forge test -vvv --contracts ./src/test/2026-01/makina_exp.sol
+forge test -vvv --contracts ./src/test/2026-01/makina_exp.sol --evm-version cancun
+# MUST use evm >= cancun
 ```
 
 #### Contract
@@ -1489,7 +1497,9 @@ forge test -vvv --contracts ./src/test/2026-01/makina_exp.sol
 
 ### Link reference
 https://x.com/nn0b0dyyy/status/2013472538832314630
+
 https://x.com/TenArmorAlert/status/2013460083078836342
+
 https://x.com/CertiKAlert/status/2013473512116363734
 
 
@@ -1504,6 +1514,7 @@ forge test -vvv --contracts ./src/test/2026-01/MTToken_exp.sol
 [MTToken_exp.sol](src/test/2026-01/MTToken_exp.sol)
 ### Link reference
 https://x.com/TenArmorAlert/status/2010630024274010460?s=20
+
 https://x.com/nn0b0dyyy/status/2010638145155661942?s=20
 
 
