@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-685 incidents included.
+687 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -55,7 +55,11 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 ## List of Past DeFi Incidents
 [20260310 AlkemiEarn](#20260310-alkemiearn---business-logic)
 
+[20260315 Venus THE](#20260315-venus-the---borrowbehalf--donation-attack)
+
 [20260302 Curve LlamaLend](#20260302-curve-llamalend---share-price-manipulation)
+
+[20260222 LAXO Token](#20260222-laxo-token---incorrect-burn-logic)
 
 [20260215 Moonwell](#20260215-moonwell---faulty-oracle)
 
@@ -1469,6 +1473,21 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20260315 Venus THE - BorrowBehalf + Donation Attack
+
+### Lost: 913,858.263360521396654198 CAKE + 1,972.530910582753621682 WBNB
+
+```sh
+forge test --contracts src/test/2026-03/Venus_THE_exp.sol --match-test testTraceDrivenPoC -vvv
+```
+#### Contract
+[Venus_THE_exp.sol](src/test/2026-03/Venus_THE_exp.sol)
+
+### Link reference
+https://bscscan.com/tx/0x4f477e941c12bbf32a58dc12db7bb0cb4d31d41ff25b2457e6af3c15d7f5663f
+
+---
+
 ### 20260310 AlkemiEarn - Business Logic
 
 ### Lost: 43.45 ETH
@@ -1497,6 +1516,22 @@ forge test -vvv --contracts ./src/test/2026-03/Curve_LlamaLend_exp.sol
 
 ### Link reference
 https://x.com/yieldsandmore/status/2028368378457362629
+
+---
+
+### 20260222 LAXO Token - Incorrect Burn Logic
+
+### Lost: ~137,000 US$
+
+```sh
+forge test src/test/2026-02/LAXO_Token_exp.sol -vvv
+```
+
+#### Contract
+[LAXO_Token_exp.sol](src/test/2026-02/LAXO_Token_exp.sol)
+
+### Link reference
+https://x.com/CertiKAlert/status/2027317095420072317
 
 ---
 
