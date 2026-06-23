@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-727 incidents included.
+732 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -53,6 +53,7 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20260622 ATM](#20260622-atm---lp-token-burn)
 [20260620 OLPC](#20260620-olpc---olpc-pair-reserve-manipulation)
 
 [20260618 JB](#20260618-jb---jb-helper-repeated-cycle-drains-jbusdt-pair)
@@ -60,6 +61,7 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20260617 WHALE](#20260617-whale---transfer-accounting-reserve-desync)
 
 [20260617 LBP](#20260617-lbp---lbp-balanceof-reward-accounting)
+[20260617 Aztec V1](#20260617-aztec-v1---escapehatch-proof-forgery-permissionless-rollupprocessor-exit)
 
 [20260616 DIP](#20260616-dip---fee-on-transfer-reserve-manipulation)
 
@@ -96,6 +98,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20260526 SKP Token](#20260526-skp-token---owner-backdoor-lp-burn--price-manipulation)
 
 [20260526 SKP Token](#20260526-skp-token---deliberately-engineered-drain-insider-exploit--rug-pull)
+
+[20260525 SquidRouterModule](#20260525-squidroutermodule---missing-caller-check)
 
 [20260525 New Market Trading](#20260525-new-market-trading---squidroutermodule-missing-caller-check)
 
@@ -136,6 +140,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20260302 Curve LlamaLend](#20260302-curve-llamalend---share-price-manipulation)
 
 [20260222 LAXO Token](#20260222-laxo-token---incorrect-burn-logic)
+
+[20260216 XDKRecycle](#20260216-xdkrecycle---xdk-recycle-reserve-manipulation)
 
 [20260215 Moonwell](#20260215-moonwell---faulty-oracle)
 
@@ -310,6 +316,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20250211 FourMeme](past/2025/README.md#20250211-fourmeme---logic-flaw)
 
 [20250208 Peapods Finance](past/2025/README.md#20250208-peapods-finance---price-manipulation)
+
+[20250126 AIXBTForcedSwap](past/2025/README.md#20250126-aixbtforcedswap---hardcoded-auth-key)
 
 [20250123 ODOS](past/2025/README.md#20250123-odos---invalid-signature-verification)
 
@@ -1551,6 +1559,22 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20260622 ATM - LP Token Burn
+
+### Lost: 1,603.99 WBNB
+
+
+```sh
+forge test --contracts ./src/test/2026-06/ATM_LP_Burn_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[ATM_LP_Burn_exp.sol](src/test/2026-06/ATM_LP_Burn_exp.sol)
+### Link reference
+
+https://x.com/TenArmorAlert/status/2068993748936151209
+
+---
+
 ### 20260620 OLPC - OLPC pair reserve manipulation
 
 ### Lost: 1,115,903.66 USDT
@@ -1581,6 +1605,17 @@ forge test --contracts ./src/test/2026-06/JB_exp.sol -vvv --evm-version cancun
 
 https://x.com/audit_911/status/2067943961327763788
 
+---
+
+### 20260617 Aztec V1 - escapeHatch Proof-Forgery (permissionless RollupProcessor exit)
+### Lost: ~$2.2M (1158 ETH + 150,000 DAI + 0.4696 renBTC)
+```sh
+forge test --contracts src/test/2026-06/AztecEscapeHatch_exp.sol -vvv
+```
+#### Contract
+[AztecEscapeHatch_exp.sol](src/test/2026-06/AztecEscapeHatch_exp.sol)
+### Link reference
+https://x.com/SlowMist_Team
 ---
 
 ### 20260617 WHALE - Transfer Accounting Reserve Desync
@@ -1845,6 +1880,22 @@ forge test --contracts src/test/2026-05/JoeAgent_exp.sol -vvv
 https://x.com/SlowMist_Team/status/2059887450663551352
 
 ---
+### 20260525 SquidRouterModule - Missing caller check
+
+### Lost: 0.25 WBTC + 0.29 wTAO + 0.02 WETH
+
+
+```sh
+FOUNDRY_EVM_VERSION=cancun forge test --contracts ./src/test/2026-05/SquidRouterModule_exp.sol -vvv
+```
+#### Contract
+[SquidRouterModule_exp.sol](src/test/2026-05/SquidRouterModule_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/3045
+
+---
+
 ### 20260525 New Market Trading - SquidRouterModule Missing Caller Check
 ### Lost: ~$3.98M USD
 ```sh
@@ -2160,6 +2211,22 @@ forge test src/test/2026-02/LAXO_Token_exp.sol -vvv
 
 ### Link reference
 https://x.com/CertiKAlert/status/2027317095420072317
+
+---
+
+### 20260216 XDKRecycle - XDK recycle reserve manipulation
+
+### Lost: 6.84 WBNB
+
+
+```sh
+forge test --contracts ./src/test/2026-02/XDKRecycle_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[XDKRecycle_exp.sol](src/test/2026-02/XDKRecycle_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2024163654631882916
 
 ---
 
