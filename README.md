@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-733 incidents included.
+748 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -53,6 +53,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20260624 DLMC](#20260624-dlmc---reserve-derived-liveprice-manipulation)
+[20260623 RoyalRoyalties](#20260623-royalroyalties---zero-amount-erc1155-batch-transfer-inflated-royal-lda-tier-balance)
 
 [20260622 Aztec Escape Hatch](#20260622-aztec-escape-hatch---proof_id-accounting-bypass-whitehat-reproduction)
 
@@ -115,6 +117,10 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20260520 MAPProtocol](#20260520-mapprotocol---arbitrary-mint)
 
+[20260519 ElevateFi](#20260519-elevatefi---reserve-price-manipulation)
+
+[20260518 TesseraSwap](#20260518-tesseraswap---callback-repayment-price-spread)
+
 [20260517 VerusBridge](#20260517-verusbridge---insufficient-validation)
 
 [20260517 SEAToken](#20260517-seatoken---business-logic-flaw)
@@ -124,6 +130,7 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20260512 SQTokenStaking](#20260512-sqtokenstaking---access-control)
 
 [20260511 INKFinance](#20260511-inkfinance---business-logic-flaw)
+[20260511 HumaFinance](#20260511-humafinance---credit-approval-bypass)
 
 [20260510 Renegade](#20260510-renegade---uninitialized-proxy)
 
@@ -131,9 +138,29 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20260505 Ekubo](#20260505-ekubo---business-logic-flaw)
 
+[20260428 RWAVault](#20260428-rwavault---missing-erc4626-allowance-check)
+
+[20260425 SingularityDynaVault](#20260425-singularitydynavault---oracle-misconfiguration--share-inflation)
+
+[20260421 KipseliPropAMM](#20260421-kipselipropamm---pricing--decimals-mismatch)
+
+[20260420 JuiceboxREVLoans](#20260420-juiceboxrevloans---fake-terminal-loan-source-validation-bypass)
+
+[20260420 ThetanutsVaultShareRounding](#20260420-thetanutsvaultsharerounding---vault-share-rounding-manipulation)
+
+[20260415 XLootStaking](#20260415-xlootstaking---duplicate-xloot-redemption)
+
 [20260414 MONA LisaVault](#20260414-mona-lisavault---reward-farming--burnaddress-accounting-exploit)
 
 [20260414 Saturn Protocol](#20260414-saturn-protocol---vulnerability-disclosure)
+
+[20260412 SubQuerySettings](#20260412-subquerysettings---settings-access-control)
+
+[20260407 SquidMulticallAllowanceDrain](#20260407-squidmulticallallowancedrain---arbitrary-call--wrong-approval)
+
+[20260405 PerpPair](#20260405-perppair---virtual-amm-manipulation)
+
+[20260331 WhalebitOracleManipulation](#20260331-whalebitoraclemanipulation---algebra-spot-price-oracle-manipulation)
 
 [20260327 EST Token](#20260327-est-token---incorrect-token-burn-mechanism)
 
@@ -1563,6 +1590,38 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20260624 DLMC - Reserve-derived livePrice manipulation
+
+### Lost: 222,560.22 USDT
+
+
+```sh
+forge test --contracts ./src/test/2026-06/DLMC_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[DLMC_exp.sol](src/test/2026-06/DLMC_exp.sol)
+### Link reference
+
+https://x.com/TenArmorAlert/status/2069957542109958498
+
+---
+
+### 20260623 RoyalRoyalties - Zero-amount ERC1155 batch transfer inflated Royal LDA tier balance
+
+### Lost: 261,162.93 USDC
+
+
+```sh
+forge test --contracts ./src/test/2026-06/RoyalRoyalties_exp.sol -vvv
+```
+#### Contract
+[RoyalRoyalties_exp.sol](src/test/2026-06/RoyalRoyalties_exp.sol)
+### Link reference
+
+https://x.com/TenArmorAlert/status/2069596801725002121
+
+---
+
 ### 20260622 Aztec Escape Hatch - proof_id Accounting Bypass (whitehat reproduction)
 ### Lost: N/A (purely educational; worst-case impact would have been ~$2M, matching the separate vulnerability that actually drained the contracts)
 ```sh
@@ -2008,6 +2067,33 @@ https://x.com/MapProtocol/status/2059587998409490510
 
 ---
 
+### 20260519 ElevateFi - Reserve Price Manipulation
+
+### Lost: ~16,000 USD
+
+```sh
+forge test --contracts ./src/test/2026-05/ElevateFi_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[ElevateFi_exp.sol](src/test/2026-05/ElevateFi_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/3040
+
+---
+
+### 20260518 TesseraSwap - Callback Repayment Price Spread
+### Lost: ~$20K
+```sh
+forge test --contracts ./src/test/2026-05/TesseraSwap_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[TesseraSwap_exp.sol](src/test/2026-05/TesseraSwap_exp.sol)
+### Link reference
+https://t.me/defimon_alerts/3038
+
+---
+
 ### 20260517 VerusBridge - Insufficient Validation
 ### Lost: ~$11.58M
 ```sh
@@ -2075,6 +2161,18 @@ https://www.cryptotimes.io/2026/05/11/ink-finance-exploited-on-polygon-140k-usdt
 
 ---
 
+### 20260511 HumaFinance - Credit Approval Bypass
+### Lost: ~$101K (82,315 USDC + 19,074 USDC.e)
+```sh
+forge test --contracts src/test/2026-05/HumaCreditApprovalBypass_exp.sol -vv
+```
+#### Contract
+[HumaCreditApprovalBypass_exp.sol](src/test/2026-05/HumaCreditApprovalBypass_exp.sol)
+### Link reference
+https://www.cryptotimes.io/2026/05/11/huma-finance-v1-exploit-on-polygon-drains-101k-in-usdc/
+
+---
+
 ### 20260510 Renegade - Uninitialized Proxy
 ### Lost: ~$209K
 ```sh
@@ -2117,6 +2215,102 @@ https://x.com/blockaid_/status/2051757787714118125
 
 ---
 
+### 20260428 RWAVault - Missing ERC4626 allowance check
+
+### Lost: 398,655.47 USDC
+
+
+```sh
+forge test --contracts ./src/test/2026-04/RWAVault_exp.sol -vvv
+```
+#### Contract
+[RWAVault_exp.sol](src/test/2026-04/RWAVault_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/2958
+
+---
+
+### 20260425 SingularityDynaVault - Oracle Misconfiguration / Share Inflation
+
+### Lost: 413.13K USDC
+
+
+```sh
+forge test --contracts ./src/test/2026-04/SingularityDynaVault_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[SingularityDynaVault_exp.sol](src/test/2026-04/SingularityDynaVault_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2048698708309705069
+
+---
+
+### 20260421 KipseliPropAMM - Pricing / Decimals Mismatch
+
+### Lost: 0.93 cbBTC
+
+
+```sh
+forge test --contracts ./src/test/2026-04/KipseliPropAMM_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[KipseliPropAMM_exp.sol](src/test/2026-04/KipseliPropAMM_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2046873857571934254
+
+---
+
+### 20260420 JuiceboxREVLoans - Fake terminal loan source validation bypass
+
+### Lost: 21.77 ETH
+
+
+```sh
+forge test --contracts ./src/test/2026-04/JuiceboxREVLoans_exp.sol -vvv
+```
+#### Contract
+[JuiceboxREVLoans_exp.sol](src/test/2026-04/JuiceboxREVLoans_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2046862935650345139
+
+---
+
+### 20260420 ThetanutsVaultShareRounding - Vault Share Rounding Manipulation
+
+### Lost: 0.15 WBTC
+
+
+```sh
+forge test --contracts ./src/test/2026-04/ThetanutsVaultShareRounding_exp.sol -vvv
+```
+#### Contract
+[ThetanutsVaultShareRounding_exp.sol](src/test/2026-04/ThetanutsVaultShareRounding_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/2933
+
+---
+
+### 20260415 XLootStaking - Duplicate xLOOT Redemption
+
+### Lost: 6.21 ETH
+
+
+```sh
+forge test --contracts ./src/test/2026-04/XLootStaking_exp.sol -vvv
+```
+#### Contract
+[XLootStaking_exp.sol](src/test/2026-04/XLootStaking_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2044709964091187660
+
+---
+
 ## 20260414 MONA LisaVault - reward-farming / BurnAddress accounting exploit!
 
 ### Lost  ~60.95K USDT
@@ -2151,6 +2345,71 @@ forge test --contracts src/test/2026-04/SaturnProtocol_exp.sol -vvv --fork-url h
 https://gist.github.com/sgInnora/b70ad98327649ed4ab976a122f45e485
 
 Note: Vendor states SAT-001 (underflow) is mitigated by `_validateTotals`, and SAT-002 (tolerance compound) is a trusted-role design observation.
+
+---
+
+### 20260412 SubQuerySettings - Settings access control
+
+### Lost: 218.07M SQT
+
+```sh
+forge test --contracts ./src/test/2026-04/SubQuerySettings_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[SubQuerySettings_exp.sol](src/test/2026-04/SubQuerySettings_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/2909
+
+---
+
+### 20260407 SquidMulticallAllowanceDrain - Arbitrary Call / Wrong Approval
+
+### Lost: 1 ETH
+
+```sh
+forge test --contracts ./src/test/2026-04/SquidMulticallAllowanceDrain_exp.sol -vvv --evm-version shanghai
+```
+
+#### Contract
+
+[SquidMulticallAllowanceDrain_exp.sol](src/test/2026-04/SquidMulticallAllowanceDrain_exp.sol)
+
+### Link reference
+
+https://x.com/DefimonAlerts/status/2041530294369386806
+
+---
+
+### 20260405 PerpPair - Virtual AMM Manipulation
+
+### Lost: 165K USDC
+
+
+```sh
+forge test --contracts ./src/test/2026-04/PerpPair_exp.sol -vvv --evm-version prague
+```
+#### Contract
+[PerpPair_exp.sol](src/test/2026-04/PerpPair_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2041070927908126897
+
+---
+
+### 20260331 WhalebitOracleManipulation - Algebra spot-price oracle manipulation
+
+### Lost: 824K USD
+
+
+```sh
+forge test --contracts ./src/test/2026-03/WhalebitOracleManipulation_exp.sol -vvv
+```
+#### Contract
+[WhalebitOracleManipulation_exp.sol](src/test/2026-03/WhalebitOracleManipulation_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2039372077686251787
 
 ---
 
