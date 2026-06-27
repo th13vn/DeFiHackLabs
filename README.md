@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-748 incidents included.
+754 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -53,6 +53,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20260625 LixirPermitDrain](#20260625-lixirpermitdrain---broken-signature-verification)
+[20260625 OceanBPoolSideStaking](#20260625-oceanbpoolsidestaking---bpool-single-sided-joinexit-math-with-sidestaking-gulp-accounting)
 [20260624 DLMC](#20260624-dlmc---reserve-derived-liveprice-manipulation)
 [20260623 RoyalRoyalties](#20260623-royalroyalties---zero-amount-erc1155-batch-transfer-inflated-royal-lda-tier-balance)
 
@@ -138,7 +140,13 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20260505 Ekubo](#20260505-ekubo---business-logic-flaw)
 
+[20260501 SharwaMarginTrading](#20260501-sharwamargintrading---hegic-collateral-spot-price-manipulation)
+
 [20260428 RWAVault](#20260428-rwavault---missing-erc4626-allowance-check)
+
+[20260428 JUDAO](#20260428-judao---judao-sell-hook-reserve-drain)
+
+[20260427 Unverified_a152](#20260427-unverified_a152---allowancetarget-approval-drain)
 
 [20260425 SingularityDynaVault](#20260425-singularitydynavault---oracle-misconfiguration--share-inflation)
 
@@ -147,6 +155,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20260420 JuiceboxREVLoans](#20260420-juiceboxrevloans---fake-terminal-loan-source-validation-bypass)
 
 [20260420 ThetanutsVaultShareRounding](#20260420-thetanutsvaultsharerounding---vault-share-rounding-manipulation)
+
+[20260419 AaveRebalancerCreditDelegation](#20260419-aaverebalancercreditdelegation---arbitrary-external-call--credit-delegation-abuse)
 
 [20260415 XLootStaking](#20260415-xlootstaking---duplicate-xloot-redemption)
 
@@ -1590,6 +1600,38 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20260625 LixirPermitDrain - Broken Signature Verification
+
+### Lost: 2.60 ETH, 4,477.72 USDC, 3,609.95 USDT, 24,182.56 LIX
+
+
+```sh
+forge test --contracts ./src/test/2026-06/LixirPermitDrain_exp.sol -vvv
+```
+#### Contract
+[LixirPermitDrain_exp.sol](src/test/2026-06/LixirPermitDrain_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2070362661691207935
+
+---
+
+### 20260625 OceanBPoolSideStaking - BPool single-sided join/exit math with SideStaking gulp accounting
+
+### Lost: 127.86K mOCEAN
+
+
+```sh
+forge test --contracts ./src/test/2026-06/OceanBPoolSideStaking_exp.sol -vvv
+```
+#### Contract
+[OceanBPoolSideStaking_exp.sol](src/test/2026-06/OceanBPoolSideStaking_exp.sol)
+### Link reference
+
+http://x.com/defimonalerts/status/2070362661540286735
+
+---
+
 ### 20260624 DLMC - Reserve-derived livePrice manipulation
 
 ### Lost: 222,560.22 USDT
@@ -2215,6 +2257,22 @@ https://x.com/blockaid_/status/2051757787714118125
 
 ---
 
+### 20260501 SharwaMarginTrading - Hegic collateral spot price manipulation
+
+### Lost: 32.85K USDC
+
+
+```sh
+forge test --contracts ./src/test/2026-05/SharwaMarginTrading_exp.sol -vvv
+```
+#### Contract
+[SharwaMarginTrading_exp.sol](src/test/2026-05/SharwaMarginTrading_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/2975
+
+---
+
 ### 20260428 RWAVault - Missing ERC4626 allowance check
 
 ### Lost: 398,655.47 USDC
@@ -2228,6 +2286,38 @@ forge test --contracts ./src/test/2026-04/RWAVault_exp.sol -vvv
 ### Link reference
 
 https://t.me/defimon_alerts/2958
+
+---
+
+### 20260428 JUDAO - JUDAO sell-hook reserve drain
+
+### Lost: 205K USDT + 36 BNB
+
+
+```sh
+forge test --contracts ./src/test/2026-04/JUDAO_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[JUDAO_exp.sol](src/test/2026-04/JUDAO_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/2955
+
+---
+
+### 20260427 Unverified_a152 - AllowanceTarget approval drain
+
+### Lost: 229K USDT
+
+
+```sh
+forge test --contracts ./src/test/2026-04/unverified_a152_exp.sol -vvv
+```
+#### Contract
+[unverified_a152_exp.sol](src/test/2026-04/unverified_a152_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/2987
 
 ---
 
@@ -2292,6 +2382,22 @@ forge test --contracts ./src/test/2026-04/ThetanutsVaultShareRounding_exp.sol -v
 ### Link reference
 
 https://t.me/defimon_alerts/2933
+
+---
+
+### 20260419 AaveRebalancerCreditDelegation - Arbitrary External Call / Credit Delegation Abuse
+
+### Lost: 6,999.91 WAVAX
+
+
+```sh
+forge test --contracts ./src/test/2026-04/AaveRebalancerCreditDelegation_exp.sol -vvv
+```
+#### Contract
+[AaveRebalancerCreditDelegation_exp.sol](src/test/2026-04/AaveRebalancerCreditDelegation_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2046504796463808991
 
 ---
 
