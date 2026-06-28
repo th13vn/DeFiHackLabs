@@ -2,7 +2,8 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-754 incidents included.
+
+778 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -150,6 +151,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20260425 SingularityDynaVault](#20260425-singularitydynavault---oracle-misconfiguration--share-inflation)
 
+[20260423 GiddyVaultV3](#20260423-giddyvaultv3---incomplete-signature-coverage)
+
 [20260421 KipseliPropAMM](#20260421-kipselipropamm---pricing--decimals-mismatch)
 
 [20260420 JuiceboxREVLoans](#20260420-juiceboxrevloans---fake-terminal-loan-source-validation-bypass)
@@ -172,10 +175,22 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20260331 WhalebitOracleManipulation](#20260331-whalebitoraclemanipulation---algebra-spot-price-oracle-manipulation)
 
+[20260328 VTSwapHook](#20260328-vtswaphook---pricing-error-in-uniswapv4-hook)
 [20260327 EST Token](#20260327-est-token---incorrect-token-burn-mechanism)
 
+[20260324 XocolatlLiquidator](#20260324-xocolatlliquidator---access-control--input-validation)
+
+[20260324 Univ3CollateralToken](#20260324-univ3collateraltoken---logic-error)
+
+[20260323 BCE](#20260323-bce---deflationary-token-logic-error)
+
+[20260319 ATMBlindBox](#20260319-atmblindbox---weak-randomness--predictable-rng)
+
+[20260319 Revamp](#20260319-revamp---reward-accounting-drain)
+[20260316 unverified](#20260316-unverified---checkoutpool-old-boc-missing-access-control)
 [20260315 Venus THE](#20260315-venus-the---borrowbehalf--donation-attack)
 
+[20260315 StakeOnMe](#20260315-stakeonme---owner-privileged-jake-burn-reserve-drain)
 [20260310 AlkemiEarn](#20260310-alkemiearn---business-logic)
 
 [20260302 Curve LlamaLend](#20260302-curve-llamalend---share-price-manipulation)
@@ -302,6 +317,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250509 Nalakuvara_LotteryTicket50](past/2025/README.md#20250509-nalakuvara_lotteryticket50---price-manipulation)
 
+[20250427 AventaRewardClaim](past/2025/README.md#20250427-aventarewardclaim---claim-accounting)
+
 [20250426 Lifeprotocol](past/2025/README.md#20250426-lifeprotocol---price-manipulation)
 
 [20250426 ImpermaxV3](past/2025/README.md#20250426-impermaxv3---flashloan-price-oracle-manipulation)
@@ -309,6 +326,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20250416 Roar](past/2025/README.md#20250416-roar---rug-pull)
 
 [20250408 Laundromat](past/2025/README.md#20250408-laundromat---logic-flaw)
+
+[20250407 AmpKashi](past/2025/README.md#20250407-ampkashi---amp-collateral-borrow-price-manipulation)
 
 [20250404 AIRWA](past/2025/README.md#20250404-airwa---access-control)
 
@@ -328,21 +347,37 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250318 DCFToken](past/2025/README.md#20250318-dcftoken---lack-of-slippage-protection)
 
+[20250318 unverified](past/2025/README.md#20250318-unverified---business-logic-flaw)
+
 [20250316 wKeyDAO](past/2025/README.md#20250316-wkeydao---unprotected-function)
 
 [20250314 H2O](past/2025/README.md#20250314-h2o---weak-random-mint)
 
+[20250311 ZeroExSettler](past/2025/README.md#20250311-zeroexsettler---arbitrary-external-call)
+
 [20250311 DUCKVADER](past/2025/README.md#20250311-duckvader---free-mint-bug)
+
+[20250307 StackMarket](past/2025/README.md#20250307-stackmarket---business-logic-flaw)
 
 [20250307 UNI](past/2025/README.md#20250307-uni---logic-flaw)
 
 [20250307 SBRToken](past/2025/README.md#20250307-sbr-token---price-manipulation)
+
+[20250306 unverified](past/2025/README.md#20250306-unverified---business-logic-flaw)
+
+[20250306 RnsPay](past/2025/README.md#20250306-rnspay---arbitrary-external-call)
+
+[20250306 PTM](past/2025/README.md#20250306-ptm---business-logic-flaw)
 
 [20250305 1inch Fusion V1 Settlement](past/2025/README.md#20250305-1inch-fusionv1-settlement---arbitrary-yul-calldata)
 
 [20250304 Pump](past/2025/README.md#20250304-pump---not-slippage-protection)
 
 [20250227 Venus_ZKSync](past/2025/README.md#20250227-venus_zksync---donation-attack)
+
+[20250226 HenloKart](past/2025/README.md#20250226-henlokart---fake-native-deposit-and-immediate-cancel)
+
+[20250224 INVISTECH](past/2025/README.md#20250224-invistech---pair-tax-price-manipulation)
 
 [20250223 HegicOptions](past/2025/README.md#20250223-hegicoptions---business-logic-flaw)
 
@@ -354,9 +389,17 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250215 unverified_d4f1](past/2025/README.md#20250215-unverified_d4f1---access-control)
 
+[20250211 Scorch](past/2025/README.md#20250211-scorch---price-oracle-manipulation)
+[20250211 LimitOrderProtocol](past/2025/README.md#20250211-limitorderprotocol---access-control)
 [20250211 FourMeme](past/2025/README.md#20250211-fourmeme---logic-flaw)
 
+[20250208 GMT7](past/2025/README.md#20250208-gmt7---access-control)
+
 [20250208 Peapods Finance](past/2025/README.md#20250208-peapods-finance---price-manipulation)
+
+[20250201 GoldReserve](past/2025/README.md#20250201-goldreserve---business-logic-flaw)
+
+[20250128 MCAI](past/2025/README.md#20250128-mcai---tax-wallet-allowance-bypass)
 
 [20250126 AIXBTForcedSwap](past/2025/README.md#20250126-aixbtforcedswap---hardcoded-auth-key)
 
@@ -2337,6 +2380,22 @@ https://x.com/DefimonAlerts/status/2048698708309705069
 
 ---
 
+### 20260423 GiddyVaultV3 - Incomplete Signature Coverage
+
+### Lost: $1.3M
+
+
+```sh
+forge test --contracts ./src/test/2026-04/giddyvaultv3_compound_auth_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[giddyvaultv3_compound_auth_exp.sol](src/test/2026-04/giddyvaultv3_compound_auth_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2047334517535642024
+
+---
+
 ### 20260421 KipseliPropAMM - Pricing / Decimals Mismatch
 
 ### Lost: 0.93 cbBTC
@@ -2519,6 +2578,22 @@ https://x.com/DefimonAlerts/status/2039372077686251787
 
 ---
 
+### 20260328 VTSwapHook - Pricing Error in UniswapV4 Hook
+
+### Lost: 4,507,034.03 vATH + 2,007,935.14 ATH
+
+
+```sh
+forge test --contracts ./src/test/2026-03/VTSwapHook_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[VTSwapHook_exp.sol](src/test/2026-03/VTSwapHook_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2038647146098954283
+
+---
+
 ### 20260327 EST Token - Incorrect Token Burn Mechanism
 
 ### Lost: 150.2 WBNB
@@ -2535,6 +2610,102 @@ https://bscscan.com/address/0xD4524Be41cd452576aB9FF7b68a0b89aF8498a91
 
 ---
 
+### 20260324 XocolatlLiquidator - Access Control / Input Validation
+
+### Lost: 3.25 cbETH and 0.22 WETH
+
+
+```sh
+forge test --contracts ./src/test/2026-03/XocolatlLiquidator_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[XocolatlLiquidator_exp.sol](src/test/2026-03/XocolatlLiquidator_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/2834
+
+---
+
+### 20260324 Univ3CollateralToken - Logic Error
+
+### Lost: 57K USD
+
+
+```sh
+forge test --contracts ./src/test/2026-03/Univ3CollateralToken_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[Univ3CollateralToken_exp.sol](src/test/2026-03/Univ3CollateralToken_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2036449500512891317
+
+---
+
+### 20260323 BCE - Deflationary Token Logic Error
+
+### Lost: ~800,000 USDT
+
+
+```sh
+forge test --contracts ./src/test/2026-03/bce_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[bce_exp.sol](src/test/2026-03/bce_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/2814
+
+---
+
+### 20260319 ATMBlindBox - Weak Randomness / Predictable RNG
+
+### Lost: 99K USD
+
+
+```sh
+forge test --contracts ./src/test/2026-03/ATMBlindBox_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[ATMBlindBox_exp.sol](src/test/2026-03/ATMBlindBox_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/2808
+
+---
+
+### 20260319 Revamp - Reward Accounting Drain
+
+### Lost: 2.99 BNB
+
+
+```sh
+forge test --contracts ./src/test/2026-03/Revamp_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[Revamp_exp.sol](src/test/2026-03/Revamp_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2034532544239088053
+
+---
+
+### 20260316 unverified - CheckoutPool Old BOC Missing Access Control
+
+### Lost: 85,730 USDC
+
+
+```sh
+forge test --contracts ./src/test/2026-03/unverified_1304_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[unverified_1304_exp.sol](src/test/2026-03/unverified_1304_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2034532547191820390
+
+---
+
 ### 20260315 Venus THE - BorrowBehalf + Donation Attack
 
 ### Lost: 913,858.263360521396654198 CAKE + 1,972.530910582753621682 WBNB
@@ -2547,6 +2718,22 @@ forge test --contracts src/test/2026-03/Venus_THE_exp.sol --match-test testTrace
 
 ### Link reference
 https://bscscan.com/tx/0x4f477e941c12bbf32a58dc12db7bb0cb4d31d41ff25b2457e6af3c15d7f5663f
+
+---
+
+### 20260315 StakeOnMe - Owner-privileged JAKE burn reserve drain
+
+### Lost: 0.28 ETH
+
+
+```sh
+forge test --contracts ./src/test/2026-03/unverified_237d_exp.sol -vvv
+```
+#### Contract
+[unverified_237d_exp.sol](src/test/2026-03/unverified_237d_exp.sol)
+### Link reference
+
+https://x.com/DefimonAlerts/status/2034532549905580417
 
 ---
 
