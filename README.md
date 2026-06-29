@@ -3,7 +3,7 @@
 **Reproduce DeFi hack incidents using Foundry.**
 
 
-778 incidents included.
+827 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -239,17 +239,31 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250827 0xf340](past/2025/README.md#20250827-0xf340---access-control)
 
+[20250823 EquilibriaEPendle](past/2025/README.md#20250823-equilibriaependle---reward-accounting-flaw)
+
 [20250823 ABCCApp](past/2025/README.md#20250823-abccapp---lack-of-access-control)
+
+[20250822 Unverified_6f7a](past/2025/README.md#20250822-unverified_6f7a---access-control)
 
 [20250820 MulticallWithXera](past/2025/README.md#20250820-multicallwithxera---access-control)
 
 [20250820 0x8d2e](past/2025/README.md#20250820-0x8d2e---access-control)
 
+[20250819 PresaleV5](past/2025/README.md#20250819-presalev5---price-manipulation)
+
+[20250817 AutoPooledTradingBot](past/2025/README.md#20250817-autopooledtradingbot---business-logic-flaw)
+
+[20250816 unverified](past/2025/README.md#20250816-unverified---business-logic-flaw)
+
 [20250816 d3xai](past/2025/README.md#20250816-d3xai---price-manipulation)
+
+[20250815 SizeFlashLoanLooping](past/2025/README.md#20250815-sizeflashloanlooping---arbitrary-external-call)
 
 [20250815 PDZ](past/2025/README.md#20250815-pdz---price-manipulation)
 
 [20250815 SizeCredit](past/2025/README.md#20250815-sizecredit---access-control)
+
+[20250813 BeefyZapRouter](past/2025/README.md#20250813-beefyzaprouter---arbitrary-external-call)
 
 [20250813 YuliAI](past/2025/README.md#20250813-yuliai---price-manipulation)
 
@@ -257,21 +271,53 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250813 Grizzifi](past/2025/README.md#20250813-grizzifi---logic-flaw)
 
+[20250812 BaseBebopSettlement](past/2025/README.md#20250812-basebebopsettlement---arbitrary-external-call)
+
 [20250812 Bebop](past/2025/README.md#20250812-bebop---arbitrary-user-input)
 
 [20250811 WXC](past/2025/README.md#20250811-wxc---incorrect-token-burn-mechanism)
 
+[20250808 ArbitrumBaseSwapper](past/2025/README.md#20250808-arbitrumbaseswapper---business-logic-flaw)
+
+[20250805 MyCoinMaster](past/2025/README.md#20250805-mycoinmaster---business-logic-flaw)
+
+[20250804 BscInitcodeToken](past/2025/README.md#20250804-bscinitcodetoken---business-logic-flaw)
+
+[20250801 PendleReflector](past/2025/README.md#20250801-pendlereflector---business-logic-flaw)
+
+[20250729 AnyswapWETHPermit](past/2025/README.md#20250729-anyswapwethpermit---permit-validation-bypass)
+
 [20250728 SuperRare](past/2025/README.md#20250728-superrare---access-control)
+
+[20250728 AvaxBIFKNPair](past/2025/README.md#20250728-avaxbifknpair---flash-swap-accounting)
+
+[20250726 Unverified670471](past/2025/README.md#20250726-unverified670471---unchecked-flash-loan-callback)
+
+[20250726 Unverified6883](past/2025/README.md#20250726-unverified6883---fake-uniswap-callback)
 
 [20250726 MulticallWithETH](past/2025/README.md#20250726-multicallwitheth---arbitrary-call)
 
+[20250725 WhereIsMyDragonTreasure](past/2025/README.md#20250725-whereismydragontreasure---fixed-reward-redemption)
+
 [20250724 SWAPPStaking](past/2025/README.md#20250724-swappstaking---incorrect-reward-calculation)
+
+[20250724 EmptySetReserve](past/2025/README.md#20250724-emptysetreserve---fixed-order-swap)
+
+[20250721 BoJLeverageMarket](past/2025/README.md#20250721-bojleveragemarket---liquidity-index-manipulation)
 
 [20250720 Stepp2p](past/2025/README.md#20250720-stepp2p---logic-flaw)
 
+[20250717 unverified](past/2025/README.md#20250717-unverified---signature-verification)
+
+[20250716 StrategyLlamaLendConvex](past/2025/README.md#20250716-strategyllamalendconvex---share-price-manipulation)
+
 [20250716 VDS](past/2025/README.md#20250716-vds---logic-flaw)
 
+[20250713 UPENG](past/2025/README.md#20250713-upeng---incorrect-burn-logic)
+
 [20250709 GMX](past/2025/README.md#20250709-gmx---share-price-manipulation)
+
+[20250705 ActivePoolScrvUsd](past/2025/README.md#20250705-activepoolscrvusd---urgent-redemption)
 
 [20250705 Unverified_54cd](past/2025/README.md#20250705-unverified---access-control)
 
@@ -279,43 +325,95 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250702 FPC](past/2025/README.md#20250702-fpc---logic-flaw)
 
+[20250702 ActivePoolUrgentRedemption](past/2025/README.md#20250702-activepoolurgentredemption---urgent-redemption)
+
 [20250629 Stead](past/2025/README.md#20250629-stead---access-control)
+
+[20250628 InitcodeFactoryFees](past/2025/README.md#20250628-initcodefactoryfees---access-control)
 
 [20250626 ResupplyFi](past/2025/README.md#20250626-resupplyfi---share-price-manipulation)
 
 [20250625 Unverified_b5cb](past/2025/README.md#20250625-unverified_b5cb---access-control)
 
+[20250625 SiloFinance](past/2025/README.md#20250625-silofinance---arbitrary-call)
+
+[20250625 ParaSwapDAIApproval](past/2025/README.md#20250625-paraswapdaiapproval---stale-approval)
+
 [20250623 GradientMakerPool](past/2025/README.md#20250623-gradientmakerpool---price-oracle-manipulation)
 
+[20250620 TokenVault](past/2025/README.md#20250620-tokenvault---incorrect-dividends-calculation)
+
+[20250620 HoldSafe](past/2025/README.md#20250620-holdsafe---price-manipulation)
+
 [20250620 Gangsterfinance](past/2025/README.md#20250620-gangsterfinance---incorrect-dividends)
+
+[20250619 SinstakeZombie](past/2025/README.md#20250619-sinstakezombie---incorrect-dividends-calculation)
+
+[20250619 BasePricePool](past/2025/README.md#20250619-basepricepool---price-manipulation)
 
 [20250619 BankrollStack](past/2025/README.md#20250619-bankrollstack---incorrect-dividends-calculation)
 
 [20250619 BankrollNetwork](past/2025/README.md#20250619-bankrollnetwork---incorrect-dividends-calculation)
 
+[20250618 BankrollStackPlus](past/2025/README.md#20250618-bankrollstackplus---incorrect-dividends-calculation)
+
 [20250617 MetaPool](past/2025/README.md#20250617-metapool---access-control)
+
+[20250615 WaleCoin](past/2025/README.md#20250615-walecoin---access-control)
+
+[20250615 FixedTokenBSwap](past/2025/README.md#20250615-fixedtokenbswap---price-oracle-manipulation)
+
+[20250614 TSAggregatorGeneric](past/2025/README.md#20250614-tsaggregatorgeneric---business-logic-flaw)
 
 [20250612 AAVEBoost](past/2025/README.md#20250612-aaveboost---logic-flaw)
 
 [20250610 unverified_8490](past/2025/README.md#20250610-unverified_8490---access-control)
 
+[20250609 BitCrown](past/2025/README.md#20250609-bitcrown---access-control)
+
+[20250608 TokenFactory](past/2025/README.md#20250608-tokenfactory---business-logic-flaw)
+
+[20250603 PegaBall](past/2025/README.md#20250603-pegaball---business-logic-flaw)
+
+[20250531 DogeAlliance](past/2025/README.md#20250531-dogealliance---price-manipulation)
+
 [20250528 Corkprotocol](past/2025/README.md#20250528-corkprotocol---access-control)
+
+[20250528 Unverified_91a1](past/2025/README.md#20250528-unverified_91a1---access-control)
 
 [20250527 UsualMoney](past/2025/README.md#20250527-usualmoney---arbitrage)
 
 [20250526 YDT](past/2025/README.md#20250526-ydt---logic-flaw)
 
+[20250525 Unverified_0000](past/2025/README.md#20250525-unverified_0000---access-control)
+
+[20250525 Dumbo](past/2025/README.md#20250525-dumbo---business-logic-flaw)
+
 [20250524 RICE](past/2025/README.md#20250524-rice---lack-of-access-control)
 
 [20250520 IRYSAI](past/2025/README.md#20250520-irysai---rug-pull)
 
+[20250519 BetaPresale](past/2025/README.md#20250519-betapresale---access-control)
+
 [20250518 KRC](past/2025/README.md#20250518-krc---deflationary-token)
+
+[20250516 Bitallx](past/2025/README.md#20250516-bitallx---payout-amount-mismatch)
 
 [20250514 Unwarp](past/2025/README.md#20250514-unwarp---lack-of-access-control)
 
 [20250511 MBUToken](past/2025/README.md#20250511-mbutoken---price-manipulation-not-confirmed)
 
 [20250509 Nalakuvara_LotteryTicket50](past/2025/README.md#20250509-nalakuvara_lotteryticket50---price-manipulation)
+
+[20250506 Crosswise](past/2025/README.md#20250506-crosswise---trusted-forwarder-spoof)
+
+[20250429 FlyLong](past/2025/README.md#20250429-flylong---balance-forgery)
+
+[20250428 tcdp](past/2025/README.md#20250428-tcdp---broken-transferfrom-allowance-check)
+
+[20250427 bitdog](past/2025/README.md#20250427-bitdog---access-control)
+
+[20250427 multitransferswap](past/2025/README.md#20250427-multitransferswap---business-logic-flaw)
 
 [20250427 AventaRewardClaim](past/2025/README.md#20250427-aventarewardclaim---claim-accounting)
 

@@ -218,6 +218,24 @@ https://t.me/defimon_alerts/1733
 
 ---
 
+### 20250823 EquilibriaEPendle - Reward Accounting Flaw
+
+### Lost: 62,661.57 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-08/EquilibriaEPendle_exp.sol -vvv
+```
+#### Contract
+[EquilibriaEPendle_exp.sol](../../src/test/2025-08/EquilibriaEPendle_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1712
+
+Related tx: https://etherscan.io/tx/0x0a60d7fb1d459ebee1ddcd62d1a8fcb8faa9aa1ebbb3203f90bea7dd888af8aa
+
+---
+
 ### 20250823 ABCCApp - Lack of Access Control
 
 ### Lost: ~ $10.1K
@@ -233,6 +251,24 @@ forge test --contracts ./src/test/2025-08/ABCCApp_exp.sol -vvv
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1959457212914352530
+
+---
+
+### 20250822 Unverified_6f7a - Access Control
+
+### Lost: 7,630.46 USD
+
+```sh
+forge test --contracts ./src/test/2025-08/unverified_6f7a_exp.sol -vv --evm-version cancun
+```
+
+#### Contract
+
+[unverified_6f7a_exp.sol](../../src/test/2025-08/unverified_6f7a_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1706
 
 ---
 
@@ -271,6 +307,58 @@ https://x.com/TenArmorAlert/status/1958354933247590450
 
 ---
 
+### 20250819 PresaleV5 - Price Manipulation
+
+### Lost: 9,769.23 USD
+
+```sh
+forge test --contracts ./src/test/2025-08/PresaleV5_exp.sol -vv --evm-version cancun
+```
+
+#### Contract
+
+[PresaleV5_exp.sol](../../src/test/2025-08/PresaleV5_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1688
+
+---
+
+### 20250817 AutoPooledTradingBot - Business Logic Flaw
+
+### Lost: 0.15198 ETH
+
+```sh
+forge test --contracts ./src/test/2025-08/AutoPooledTradingBot_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+
+[AutoPooledTradingBot_exp.sol](../../src/test/2025-08/AutoPooledTradingBot_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1676
+
+---
+
+### 20250816 unverified - Business Logic Flaw
+
+### Lost: 3,131.11 DAI
+
+```sh
+forge test --contracts ./src/test/2025-08/unverified_d132_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+
+[unverified_d132_exp.sol](../../src/test/2025-08/unverified_d132_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1675
+
+---
+
 ### 20250816 d3xai - Price Manipulation
 
 ### Lost: 190 BNB
@@ -285,6 +373,21 @@ forge test --contracts ./src/test/2025-08/d3xai_exp.sol -vvv
 ### Link reference
 
 https://x.com/suplabsyi/status/1956695597546893598
+
+---
+
+### 20250815 SizeFlashLoanLooping - Arbitrary External Call
+
+### Lost: 533.05 USD
+
+```sh
+forge test --contracts ./src/test/2025-08/SizeFlashLoanLooping_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[SizeFlashLoanLooping_exp.sol](../../src/test/2025-08/SizeFlashLoanLooping_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1669
 
 ---
 
@@ -321,6 +424,21 @@ forge test --contracts ./src/test/2025-08/SizeCredit_exp.sol -vvv
 ### Link reference
 
 https://x.com/SuplabsYi/status/1956306748073230785
+
+---
+
+### 20250813 BeefyZapRouter - Arbitrary External Call
+
+### Lost: 6,584.95 USD
+
+```sh
+forge test --contracts ./src/test/2025-08/BeefyZapRouter_exp.sol -vvv
+```
+#### Contract
+[BeefyZapRouter_exp.sol](../../src/test/2025-08/BeefyZapRouter_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1664
 
 ---
 
@@ -375,6 +493,22 @@ https://x.com/MetaTrustAlert/status/1955967862276829375
 
 ---
 
+### 20250812 BaseBebopSettlement - Arbitrary External Call
+
+### Lost: 3,875.46 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-08/BaseBebopSettlement_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[BaseBebopSettlement_exp.sol](../../src/test/2025-08/BaseBebopSettlement_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1660
+
+---
+
 ### 20250812 Bebop - Arbitrary user input
 
 ### Lost: 21k USD
@@ -408,6 +542,91 @@ https://x.com/TenArmorAlert/status/1954774967481962832
 
 ---
 
+### 20250808 ArbitrumBaseSwapper - Business Logic Flaw
+
+### Lost: 1,847.33 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-08/ArbitrumBaseSwapper_exp.sol -vvv
+```
+#### Contract
+[ArbitrumBaseSwapper_exp.sol](../../src/test/2025-08/ArbitrumBaseSwapper_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1638
+
+---
+
+### 20250805 MyCoinMaster - Business Logic Flaw
+
+### Lost: 653.49 USD
+
+```sh
+forge test --contracts ./src/test/2025-08/MyCoinMaster_exp.sol -vvv
+```
+
+#### Contract
+
+[MyCoinMaster_exp.sol](../../src/test/2025-08/MyCoinMaster_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1628
+
+---
+
+### 20250804 BscInitcodeToken - Business Logic Flaw
+
+### Lost: 700.32 USD
+
+```sh
+forge test --contracts ./src/test/2025-08/BscInitcodeToken_exp.sol -vvv
+```
+
+#### Contract
+
+[BscInitcodeToken_exp.sol](../../src/test/2025-08/BscInitcodeToken_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1619
+
+---
+
+### 20250801 PendleReflector - Business Logic Flaw
+
+### Lost: 2304.18 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-08/PendleReflector_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[PendleReflector_exp.sol](../../src/test/2025-08/PendleReflector_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1596
+
+---
+
+### 20250729 AnyswapWETHPermit - Permit Validation Bypass
+
+### Lost: 200 WETH
+
+```sh
+forge test --contracts ./src/test/2025-07/AnyswapWETHPermit_exp.sol -vvv
+```
+
+#### Contract
+[AnyswapWETHPermit_exp.sol](../../src/test/2025-07/AnyswapWETHPermit_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1582
+
+---
+
 ### 20250728 SuperRare - Access Control
 
 ### Lost: 730K USD
@@ -423,6 +642,51 @@ https://x.com/SlowMist_Team/status/1949770231733530682
 
 ---
 
+### 20250728 AvaxBIFKNPair - Flash Swap Accounting
+
+### Lost: 2.4K USD
+
+```sh
+forge test --contracts ./src/test/2025-07/AvaxBIFKNPair_exp.sol -vvv
+```
+#### Contract
+[AvaxBIFKNPair_exp.sol](../../src/test/2025-07/AvaxBIFKNPair_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1559
+
+---
+
+### 20250726 Unverified670471 - Unchecked Flash Loan Callback
+
+### Lost: $1,818.33
+
+```sh
+forge test --contracts ./src/test/2025-07/Unverified670471_exp.sol --evm-version cancun -vvv
+```
+#### Contract
+[Unverified670471_exp.sol](../../src/test/2025-07/Unverified670471_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1549
+
+---
+
+### 20250726 Unverified6883 - Fake Uniswap Callback
+
+### Lost: $1,006.89
+
+```sh
+forge test --contracts ./src/test/2025-07/Unverified6883_exp.sol -vvv
+```
+#### Contract
+[Unverified6883_exp.sol](../../src/test/2025-07/Unverified6883_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1544
+
+---
+
 ### 20250726 MulticallWithETH - arbitrary-call
 
 ### Lost: 10K USD
@@ -435,6 +699,22 @@ forge test --contracts ./src/test/2025-07/MulticallWithETH_exp.sol -vvv
 [MulticallWithETH_exp.sol](../../src/test/2025-07/MulticallWithETH_exp.sol)
 ### Link reference
 
+
+---
+
+### 20250725 WhereIsMyDragonTreasure - Fixed Reward Redemption
+
+### Lost: $47,461.35
+
+
+```sh
+forge test --contracts ./src/test/2025-07/WhereIsMyDragonTreasure_exp.sol -vvv
+```
+#### Contract
+[WhereIsMyDragonTreasure_exp.sol](../../src/test/2025-07/WhereIsMyDragonTreasure_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1537
 
 ---
 
@@ -454,6 +734,38 @@ https://x.com/deeberiroz/status/1947213692220710950
 
 ---
 
+### 20250724 EmptySetReserve - Fixed Order Swap
+
+### Lost: $1,509.78
+
+
+```sh
+forge test --contracts ./src/test/2025-07/EmptySetReserve_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[EmptySetReserve_exp.sol](../../src/test/2025-07/EmptySetReserve_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1532
+
+---
+
+### 20250721 BoJLeverageMarket - Liquidity Index Manipulation
+
+### Lost: $7,227.59 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-07/BoJLeverageMarket_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[BoJLeverageMarket_exp.sol](../../src/test/2025-07/BoJLeverageMarket_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1521
+
+---
+
 ### 20250720 Stepp2p - Logic Flaw
 
 ### Lost: 43k USD
@@ -467,6 +779,23 @@ forge test --contracts ./src/test/2025-07/Stepp2p_exp.sol -vvv --evm-version sha
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1946887946877149520
+
+---
+
+### 20250717 unverified - Signature Verification
+
+### Lost: 502.42 USDT
+
+```sh
+forge test --contracts ./src/test/2025-07/unverified_8fd3_exp.sol -vvv --evm-version shanghai
+```
+
+#### Contract
+[unverified_8fd3_exp.sol](../../src/test/2025-07/unverified_8fd3_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1508
 
 ---
 
@@ -484,6 +813,23 @@ forge test --contracts ./src/test/2025-07/WETC_Token_exp.sol -vvv --evm-version 
 ### Link reference
 
 https://t.me/evmhacks/78?single
+
+---
+
+### 20250716 StrategyLlamaLendConvex - Share Price Manipulation
+
+### Lost: 563.12 USDC
+
+```sh
+forge test --contracts ./src/test/2025-07/StrategyLlamaLendConvex_exp.sol -vvv
+```
+
+#### Contract
+[StrategyLlamaLendConvex_exp.sol](../../src/test/2025-07/StrategyLlamaLendConvex_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1495
 
 ---
 
@@ -505,6 +851,22 @@ https://x.com/SlowMist_Team/status/1945672192471302645
 
 ---
 
+### 20250713 UPENG - Incorrect Burn Logic
+
+### Lost: $1,035.06
+
+```sh
+forge test --contracts ./src/test/2025-07/UPENGBurnSync_exp.sol -vvv
+```
+#### Contract
+[UPENGBurnSync_exp.sol](../../src/test/2025-07/UPENGBurnSync_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1470
+
+---
+
 ### 20250709 GMX - Share price manipulation
 
 ### Lost: 41M USD
@@ -518,6 +880,22 @@ forge test --contracts ./src/test/2025-07/gmx_exp.sol -vvv
 ### Link reference
 
 https://x.com/GMX_IO/status/1943336664102756471
+
+---
+
+### 20250705 ActivePoolScrvUsd - Urgent Redemption
+
+### Lost: $4,204.55
+
+```sh
+forge test --contracts ./src/test/2025-07/ActivePoolScrvUsdUrgentRedemption_exp.sol -vvv
+```
+#### Contract
+[ActivePoolScrvUsdUrgentRedemption_exp.sol](../../src/test/2025-07/ActivePoolScrvUsdUrgentRedemption_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1415
 
 ---
 
@@ -571,6 +949,24 @@ https://x.com/TenArmorAlert/status/1940423393880244327
 
 ---
 
+### 20250702 ActivePoolUrgentRedemption - Urgent Redemption
+
+### Lost: 2,696.49 USD
+
+```sh
+forge test --contracts ./src/test/2025-07/ActivePoolUrgentRedemption_exp.sol -vvv
+```
+
+#### Contract
+
+[ActivePoolUrgentRedemption_exp.sol](../../src/test/2025-07/ActivePoolUrgentRedemption_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/1379
+
+---
+
 ### 20250629 Stead - Access Control
 
 ### Lost: 14.5k USD
@@ -586,6 +982,22 @@ forge test --contracts ./src/test/2025-06/Stead_exp.sol -vvv
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1939508301596672036
+
+---
+
+### 20250628 InitcodeFactoryFees - Access Control
+
+### Lost: 2,383.25 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/InitcodeFactoryFees_exp.sol -vvv
+```
+#### Contract
+[InitcodeFactoryFees_exp.sol](../../src/test/2025-06/InitcodeFactoryFees_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1366
 
 ---
 
@@ -622,6 +1034,38 @@ https://x.com/TenArmorAlert/status/1937761064713941187
 
 ---
 
+### 20250625 SiloFinance - Arbitrary Call
+
+### Lost: 500,000+ USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/SiloFinance_exp.sol -vvv
+```
+#### Contract
+[SiloFinance_exp.sol](../../src/test/2025-06/SiloFinance_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1356
+
+---
+
+### 20250625 ParaSwapDAIApproval - Stale Approval
+
+### Lost: 2,298.68 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/ParaSwapDAIApproval_exp.sol -vvv
+```
+#### Contract
+[ParaSwapDAIApproval_exp.sol](../../src/test/2025-06/ParaSwapDAIApproval_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1352
+
+---
+
 
 ### 20250623 GradientMakerPool - Price Oracle Manipulation
 
@@ -640,6 +1084,38 @@ https://t.me/defimon_alerts/1339
 
 ---
 
+### 20250620 TokenVault - Incorrect dividends calculation
+
+### Lost: 3,226.51 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/TokenVault_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[TokenVault_exp.sol](../../src/test/2025-06/TokenVault_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1325
+
+---
+
+### 20250620 HoldSafe - Price Manipulation
+
+### Lost: 4,824.96 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/HoldSafe_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[HoldSafe_exp.sol](../../src/test/2025-06/HoldSafe_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1320
+
+---
+
 ### 20250620 Gangsterfinance - Incorrect dividends
 
 ### Lost: 16.5k USD
@@ -653,6 +1129,38 @@ forge test --contracts ./src/test/2025-06/Gangsterfinance.sol -vvv --evm-version
 ### Link reference
 
 https://t.me/defimon_alerts/1323
+
+---
+
+### 20250619 SinstakeZombie - Incorrect dividends calculation
+
+### Lost: 705.13 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/SinstakeZombie_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[SinstakeZombie_exp.sol](../../src/test/2025-06/SinstakeZombie_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1319
+
+---
+
+### 20250619 BasePricePool - Price Manipulation
+
+### Lost: 802.57 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/BasePricePool_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[BasePricePool_exp.sol](../../src/test/2025-06/BasePricePool_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1306
 
 ---
 
@@ -685,6 +1193,22 @@ https://x.com/TenArmorAlert/status/1935618109802459464
 
 ---
 
+### 20250618 BankrollStackPlus - Incorrect dividends calculation
+
+### Lost: 12,234.48 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/BankrollStackPlus_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[BankrollStackPlus_exp.sol](../../src/test/2025-06/BankrollStackPlus_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1301
+
+---
+
 ### 20250617 MetaPool - Access Control
 
 ### Lost: 25k USD
@@ -698,6 +1222,54 @@ forge test --contracts ./src/test/2025-06/MetaPool_exp.sol -vvv
 ### Link reference
 
 https://x.com/peckshield/status/1934895187102454206
+
+---
+
+### 20250615 WaleCoin - Access Control
+
+### Lost: 918.83 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/WaleCoin_exp.sol -vvv
+```
+#### Contract
+[WaleCoin_exp.sol](../../src/test/2025-06/WaleCoin_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1279
+
+---
+
+### 20250615 FixedTokenBSwap - Price Oracle Manipulation
+
+### Lost: 2.2K USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/FixedTokenBSwap_exp.sol -vvv
+```
+#### Contract
+[FixedTokenBSwap_exp.sol](../../src/test/2025-06/FixedTokenBSwap_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1280
+
+---
+
+### 20250614 TSAggregatorGeneric - Business Logic Flaw
+
+### Lost: 1300 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/TSAggregatorGeneric_exp.sol -vvv
+```
+#### Contract
+[TSAggregatorGeneric_exp.sol](../../src/test/2025-06/TSAggregatorGeneric_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1278
 
 ---
 
@@ -733,6 +1305,70 @@ https://x.com/TenArmorAlert/status/1932309011564781774
 
 ---
 
+### 20250609 BitCrown - Access Control
+
+### Lost: 7939.27 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/BitCrown_exp.sol -vvv
+```
+#### Contract
+[BitCrown_exp.sol](../../src/test/2025-06/BitCrown_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1243
+
+---
+
+### 20250608 TokenFactory - Business Logic Flaw
+
+### Lost: 657.17 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/TokenFactory_exp.sol -vvv
+```
+#### Contract
+[TokenFactory_exp.sol](../../src/test/2025-06/TokenFactory_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1242
+
+---
+
+### 20250603 PegaBall - Business Logic Flaw
+
+### Lost: 1512.85 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/PegaBall_exp.sol -vvv
+```
+#### Contract
+[PegaBall_exp.sol](../../src/test/2025-06/PegaBall_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1229
+
+---
+
+### 20250531 DogeAlliance - Price Manipulation
+
+### Lost: 990.33 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-05/DogeAlliance_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[DogeAlliance_exp.sol](../../src/test/2025-05/DogeAlliance_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1215
+
+---
+
 ### 20250528 Corkprotocol - Access Control
 
 ### Lost: 12M USD
@@ -747,6 +1383,22 @@ forge test --contracts ./src/test/2025-05/Corkprotocol_exp.sol -vvv --via-ir --e
 
 https://x.com/SlowMist_Team/status/1928100756156194955
 
+
+---
+
+### 20250528 Unverified_91a1 - Access Control
+
+### Lost: 551.22 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-05/unverified_91a1_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[unverified_91a1_exp.sol](../../src/test/2025-05/unverified_91a1_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1197
 
 ---
 
@@ -779,6 +1431,38 @@ forge test --contracts ./src/test/2025-05/YDTtoken_exp.sol -vvv --evm-version ca
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1926587721885040686
+
+---
+
+### 20250525 Unverified_0000 - Access Control
+
+### Lost: 5,658.46 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-05/unverified_0000_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[unverified_0000_exp.sol](../../src/test/2025-05/unverified_0000_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1184
+
+---
+
+### 20250525 Dumbo - Business Logic Flaw
+
+### Lost: 628.45 BUSD
+
+
+```sh
+forge test --contracts ./src/test/2025-05/Dumbo_exp.sol -vv --evm-version shanghai
+```
+#### Contract
+[Dumbo_exp.sol](../../src/test/2025-05/Dumbo_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1181
 
 ---
 
@@ -815,6 +1499,22 @@ https://x.com/TenArmorAlert/status/1925012844052975776
 
 ---
 
+### 20250519 BetaPresale - Access Control
+
+### Lost: 1.921686798824852706 WBNB and 46.474821659738262175 BUSD
+
+
+```sh
+forge test --contracts ./src/test/2025-05/BetaPresale_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[BetaPresale_exp.sol](../../src/test/2025-05/BetaPresale_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1092
+
+---
+
 ### 20250518 KRC - deflationary token
 
 ### Lost: 7k USD
@@ -828,6 +1528,21 @@ forge test --contracts ./src/test/2025-05/KRC_token_exp.sol -vvv --evm-version s
 ### Link reference
 
 https://x.com/CertikAIAgent/status/1924280794916536765
+
+---
+
+### 20250516 Bitallx - Payout Amount Mismatch
+
+### Lost: 2,029.47 USDT
+
+```sh
+forge test --contracts ./src/test/2025-05/bitallx_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[bitallx_exp.sol](../../src/test/2025-05/bitallx_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1065
 
 ---
 
@@ -878,6 +1593,87 @@ forge test --contracts ./src/test/2025-05/Nalakuvara_LotteryTicket50_exp.sol -vv
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1920816516653617318
+
+---
+
+### 20250506 Crosswise - Trusted Forwarder Spoof
+
+### Lost: 4.16 WBNB
+
+```sh
+forge test --contracts ./src/test/2025-05/crosswise_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[crosswise_exp.sol](../../src/test/2025-05/crosswise_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1002
+
+---
+
+### 20250429 FlyLong - Balance Forgery
+
+### Lost: 1.73 BNB
+
+```sh
+forge test --contracts ./src/test/2025-04/flylong_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[flylong_exp.sol](../../src/test/2025-04/flylong_exp.sol)
+### Link reference
+
+https://t.me/defimon_alerts/968
+
+---
+
+### 20250428 tcdp - Broken transferFrom Allowance Check
+
+### Lost: 2.02 ETH
+
+```sh
+forge test --contracts ./src/test/2025-04/tcdp_exp.sol -vvv
+```
+
+#### Contract
+[tcdp_exp.sol](../../src/test/2025-04/tcdp_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/932
+
+---
+
+### 20250427 bitdog - Access Control
+
+### Lost: 2.10 BNB
+
+```sh
+forge test --contracts ./src/test/2025-04/bitdog_exp.sol -vvv --evm-version shanghai
+```
+
+#### Contract
+[bitdog_exp.sol](../../src/test/2025-04/bitdog_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/931
+
+---
+
+### 20250427 multitransferswap - Business Logic Flaw
+
+### Lost: 0.34 ETH
+
+```sh
+forge test --contracts ./src/test/2025-04/multitransferswap_exp.sol -vvv
+```
+
+#### Contract
+[multitransferswap_exp.sol](../../src/test/2025-04/multitransferswap_exp.sol)
+
+### Link reference
+
+https://t.me/defimon_alerts/929
 
 ---
 
