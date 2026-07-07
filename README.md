@@ -3,7 +3,7 @@
 **Reproduce DeFi hack incidents using Foundry.**
 
 
-831 incidents included.
+832 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -56,6 +56,7 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 ## List of Past DeFi Incidents
 [20260701 edel-xstock](#20260701-edel-xstock---price-oracle-manipulation)
 [20260629 Vault4626](#20260629-vault4626---business-logic-flaw)
+[20260706 SummerFi](#20260706-summerfi---fleetcommander-nav-inflation-via-depegged-xusd)
 [20260628 AIDC](#20260628-aidc---business-logic-flaw)
 [20260627 CookFinanceIssuance](#20260627-cookfinanceissuance---price-oracle-manipulation)
 [20260625 LixirPermitDrain](#20260625-lixirpermitdrain---broken-signature-verification)
@@ -1777,6 +1778,18 @@ https://x.com/DefimonAlerts/status/2071495744071086510
 
 ---
 
+### 20260706 SummerFi - FleetCommander NAV Inflation via Depegged xUSD
+### Lost: ~$6M (DAI + LVUSDC shares)
+```sh
+forge test --contracts ./src/test/2026-07/SummerFi_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[SummerFi_exp.sol](src/test/2026-07/SummerFi_exp.sol)
+### Link reference
+https://etherscan.io/tx/0x0db528c44f23fc7fa4544684a2fab81096450a14aae8bc89f42cd0592d43da12
+
+---
+
 ### 20260628 AIDC - Business Logic Flaw
 
 ### Lost: 220.13 WBNB
@@ -1876,10 +1889,10 @@ https://x.com/TenArmorAlert/status/2069596801725002121
 ### 20260622 Aztec Escape Hatch - proof_id Accounting Bypass (whitehat reproduction)
 ### Lost: N/A (purely educational; worst-case impact would have been ~$2M, matching the separate vulnerability that actually drained the contracts)
 ```sh
-forge test --contracts src/test/2026-06/AztecEscapeHatch_exp.sol -vvv
+forge test --contracts src/test/2026-06/AztecEscapeHatch_exp2.sol -vvv
 ```
 #### Contract
-[AztecEscapeHatch_exp.sol](src/test/2026-06/AztecEscapeHatch_exp.sol)
+[AztecEscapeHatch_exp.sol](src/test/2026-06/AztecEscapeHatch_exp2.sol)
 
 ### Link reference
 
