@@ -3,7 +3,7 @@
 **Reproduce DeFi hack incidents using Foundry.**
 
 
-850 incidents included.
+852 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -54,7 +54,9 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20260807 Atomic](#20260807-atomic---flash-loan-price-oracle-manipulation-of-lending-collateral-valuation)
 [20260806 UnistreetLaunchpad](#20260806-unistreetlaunchpad---arbitrary-call-injection-via-unvalidated-launch-forwarding)
+[20260806 PantherBase](#20260806-pantherbase---realityeth-governance-timeout-exploit-pre-production-base-deployment-no-user-funds)
 [20260805 StrongBlock](#20260805-strongblock---governance-takeover-of-abandoned-governor)
 [20260803 AIC](#20260803-aic---pair-skim--reserve-mismatch-exploit-flash-swap-leveraged)
 [20260802 MOKE](#20260802-moke---unprotected-claim-drained-via-eip-7702-self-delegation)
@@ -1790,6 +1792,13 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 ---
 
 ### List of DeFi Hacks & POCs
+### 20260807 Atomic - Flash-loan price oracle manipulation of lending collateral valuation
+### Lost: ~29,984.27 USDC
+```sh
+forge test --contracts src/test/2026-08/Atomic_exp.sol --evm-version cancun -vvv
+```
+#### Contract
+[Atomic_exp.sol](src/test/2026-08/Atomic_exp.sol)
 ### 20260806 UnistreetLaunchpad - Arbitrary call injection via unvalidated launch forwarding
 ### Lost: ~$17,743.91 USDC + ~0.0072 WETH (plus 9 illiquid launch memecoin positions)
 ```sh
@@ -1797,6 +1806,13 @@ FOUNDRY_EVM_VERSION=cancun forge test --contracts src/test/2026-08/UnistreetLaun
 ```
 #### Contract
 [UnistreetLaunchpad_exp.sol](src/test/2026-08/UnistreetLaunchpad_exp.sol)
+### 20260806 PantherBase - Reality.eth governance timeout exploit (pre-production Base deployment, no user funds)
+### Lost: 5,124,773.63 ZKP + 0.1233 ETH (Panther Base pre-launch deployment, not live user funds)
+```sh
+forge test --contracts src/test/2026-08/PantherBase_exp.sol -vvv
+```
+#### Contract
+[PantherBase_exp.sol](src/test/2026-08/PantherBase_exp.sol)
 ### 20260805 StrongBlock - Governance takeover of abandoned Governor
 ### Lost: 32,695.76 STRONG + 383,447.17 STRNGR (~$72K)
 ```sh
