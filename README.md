@@ -3,7 +3,7 @@
 **Reproduce DeFi hack incidents using Foundry.**
 
 
-860 incidents included.
+862 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -54,7 +54,9 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20260827 MoonwellMAMO](#20260827-moonwellmamo---chainlink-oracle-source-price-manipulation-of-mamo-collateral)
 [20260825 EnjinCryptoItems](#20260825-enjincryptoitems---unprotected-registry-reinitialization---manager-takeover)
+[20260825 FHToken](#20260825-fhtoken---sell-tax-reserve-mismatch-via-premature-sync)
 [20260823 TermFinance](#20260823-termfinance---termmax-meta-vault-flashloan-logic-exploit)
 [20260823 ArrakisGUNI](#20260823-arrakisguni---uniswap-v3-spot-price-manipulation-of-vault-mintburn)
 [20260822 SandboxOFT](#20260822-sandboxoft---layerzero-delegate-hijack-via-approveandcall)
@@ -1809,8 +1811,14 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [Slowmist](https://hacked.slowmist.io/) | [Defillama](https://defillama.com/hacks) | [De.Fi](https://de.fi/rekt-database) | [Rekt](https://rekt.news/) | [Cryptosec](https://cryptosec.info/defi-hacks/) | [BlockSec](https://app.blocksec.com/explorer/security-incidents)
 
 ---
-
 ### List of DeFi Hacks & POCs
+### 20260827 MoonwellMAMO - Chainlink oracle-source price manipulation of MAMO collateral
+### Lost: ~71.36 cbBTC total across 12 repeated borrows (~$5.7M); this PoC reproduces the largest single instance, ~14.34 cbBTC (~$1.15M)
+```sh
+forge test --contracts src/test/2026-08/MoonwellMAMO_exp.sol --evm-version cancun -vvv
+```
+#### Contract
+[MoonwellMAMO_exp.sol](src/test/2026-08/MoonwellMAMO_exp.sol)
 ### 20260825 EnjinCryptoItems - Unprotected registry reinitialization -> manager takeover
 ### Lost: ~5.24M ENJ (attacker +5,231,353 ENJ, reserve -5,238,353 ENJ)
 ```sh
@@ -1818,6 +1826,13 @@ forge test --contracts src/test/2026-08/EnjinCryptoItems_exp.sol -vvv
 ```
 #### Contract
 [EnjinCryptoItems_exp.sol](src/test/2026-08/EnjinCryptoItems_exp.sol)
+### 20260825 FHToken - Sell-tax reserve mismatch via premature sync()
+### Lost: ~19,999.02 USDT (~$20K)
+```sh
+forge test --contracts src/test/2026-08/FHToken_exp.sol -vvv
+```
+#### Contract
+[FHToken_exp.sol](src/test/2026-08/FHToken_exp.sol)
 ### 20260823 TermFinance - TermMax meta-vault flashloan logic exploit
 ### Lost: ~2,841.74 WETH + ~1,679,639 USDC (~$8.5M combined, two independent flashloan-funded drains)
 ```sh
