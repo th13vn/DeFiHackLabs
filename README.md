@@ -3,7 +3,7 @@
 **Reproduce DeFi hack incidents using Foundry.**
 
 
-866 incidents included.
+868 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -54,6 +54,10 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20260921 DoinGud](#20260921-doingud---acceptoffer-replay-via-missing-offer-cleanup-on-the-amount0-path)
+
+[20260921 GaslessReservoirEnabler](#20260921-gaslessreservoirenabler---erc20withtransfersandexecute-lets-a-whitelisted-module-run-unvalidated-transferfrom-calldata)
+
 [20260921 InternetToken](#20260921-internettoken---permissionless-swapv3-with-caller-supplied-pool-lets-a-fake-callback-mint-int-arbitrarily)
 
 [20260918 Likwid](#20260918-likwid---missing-pairdelta-update-in-leverage0-margin-borrow-freezes-amm-quote)
@@ -1828,6 +1832,20 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ---
 ### List of DeFi Hacks & POCs
+### 20260921 DoinGud - acceptOffer replay via missing offer cleanup on the amount=0 path
+### Lost: 35,380.154566 USDC net (two byte-identical acceptOffer calls each paid out 35,486.935717 USDC from escrow; funded via a UniV2 flash swap, repaid 35,593.716868 USDC)
+```sh
+forge test --contracts src/test/2026-09/DoinGud_exp.sol -vvv
+```
+#### Contract
+[DoinGud_exp.sol](src/test/2026-09/DoinGud_exp.sol)
+### 20260921 GaslessReservoirEnabler - erc20WithTransfersAndExecute lets a whitelisted module run unvalidated transferFrom calldata
+### Lost: 8.72 WETH (~$23.8K) across 466 victims with standing approvals to the Enabler; PoC reproduces 3 victims, 2.3546 WETH (~$6.4K, ~27% of the WETH-leg loss)
+```sh
+forge test --contracts src/test/2026-09/GaslessReservoirEnabler_exp.sol -vvv
+```
+#### Contract
+[GaslessReservoirEnabler_exp.sol](src/test/2026-09/GaslessReservoirEnabler_exp.sol)
 ### 20260921 InternetToken - permissionless swapV3 with caller-supplied pool lets a fake callback mint INT arbitrarily
 ### Lost: 764,145,702 INT + 5.846988 WETH (attacker minted 925.41M INT total, dumped 161.27M into the real INT/WETH pool for the WETH, reproduced to the wei)
 ```sh
