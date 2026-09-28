@@ -3,7 +3,7 @@
 **Reproduce DeFi hack incidents using Foundry.**
 
 
-869 incidents included.
+872 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -118,9 +118,15 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20260828 AjnaFinance](#20260828-ajnafinance---liquidation-accounting-manipulation-via-self-controlled-auction)
 
+[20260827 CashCowCoin](#20260827-cashcowcoin---privileged-burn--premature-sync-drains-pancakeswap-pair)
+
+[20260826 EnjinCryptoItems](#20260826-enjincryptoitems---unprotected-registry-reinitialization-manager-takeover)
+
 [20260823 ArrakisGUNI](#20260823-arrakisguni---uniswap-v3-spot-price-manipulation-of-vault-mintburn)
 
 [20260822 SandboxOFT](#20260822-sandboxoft---layerzero-delegate-hijack-via-approveandcall)
+
+[20260819 AllbridgeCCTP](#20260819-allbridgecctp---phantom-deposit-via-unverified-message-attestation)
 
 [20260809 USM](#20260809-usm---defund-price-split-invariance-rounding-exploit)
 
@@ -2059,6 +2065,20 @@ forge test --contracts src/test/2026-08/AjnaFinance_exp.sol -vvv
 ```
 #### Contract
 [AjnaFinance_exp.sol](src/test/2026-08/AjnaFinance_exp.sol)
+### 20260827 CashCowCoin - privileged burn + premature sync() drains PancakeSwap pair
+### Lost: ~165.47 WBNB (~$117.4K)
+```sh
+forge test --contracts src/test/2026-08/CashCowCoin_exp.sol --evm-version cancun -vvv
+```
+#### Contract
+[CashCowCoin_exp.sol](src/test/2026-08/CashCowCoin_exp.sol)
+### 20260826 EnjinCryptoItems - unprotected registry reinitialization, manager takeover
+### Lost: 5,231,353 ENJ (~$142K)
+```sh
+forge test --contracts src/test/2026-08/EnjinCryptoItems_exp.sol -vvv
+```
+#### Contract
+[EnjinCryptoItems_exp.sol](src/test/2026-08/EnjinCryptoItems_exp.sol)
 ### 20260823 ArrakisGUNI - Uniswap V3 spot-price manipulation of vault mint/burn
 ### Lost: ~2.9414 ETH net attacker surplus (Arrakis V1 / G-UNI ENS-WETH vault)
 ```sh
@@ -2073,6 +2093,13 @@ forge test --contracts src/test/2026-08/SandboxOFT_exp.sol -vvv
 ```
 #### Contract
 [SandboxOFT_exp.sol](src/test/2026-08/SandboxOFT_exp.sol)
+### 20260819 AllbridgeCCTP - Phantom deposit via unverified message attestation
+### Lost: ~189,751.554381 USDC
+```sh
+forge test --contracts src/test/2026-08/AllbridgeCCTP_exp.sol --evm-version cancun -vvv
+```
+#### Contract
+[AllbridgeCCTP_exp.sol](src/test/2026-08/AllbridgeCCTP_exp.sol)
 ### 20260809 USM - defund() price split-invariance rounding exploit
 ### Lost: ~70.83 ETH
 ```sh
