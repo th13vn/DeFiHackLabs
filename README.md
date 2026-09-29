@@ -3,7 +3,7 @@
 **Reproduce DeFi hack incidents using Foundry.**
 
 
-872 incidents included.
+875 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -122,7 +122,11 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20260826 EnjinCryptoItems](#20260826-enjincryptoitems---unprotected-registry-reinitialization-manager-takeover)
 
+[20260825 FHToken](#20260825-fhtoken---sell-tax-reserve-mismatch-via-premature-sync)
+
 [20260823 ArrakisGUNI](#20260823-arrakisguni---uniswap-v3-spot-price-manipulation-of-vault-mintburn)
+
+[20260823 TermFinance](#20260823-termfinance---governance-capture-via-thinly-wrapped-aragon-voting-power)
 
 [20260822 SandboxOFT](#20260822-sandboxoft---layerzero-delegate-hijack-via-approveandcall)
 
@@ -131,6 +135,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20260809 USM](#20260809-usm---defund-price-split-invariance-rounding-exploit)
 
 [20260806 UnistreetLaunchpad](#20260806-unistreetlaunchpad---arbitrary-call-injection-via-unvalidated-launch-forwarding)
+
+[20260805 StrongBlock](#20260805-strongblock---governance-takeover-of-an-abandoned-governor)
 
 [20260803 AIC](#20260803-aic---pair-skim--reserve-mismatch-exploit-flash-swap-leveraged)
 
@@ -2079,6 +2085,13 @@ forge test --contracts src/test/2026-08/EnjinCryptoItems_exp.sol -vvv
 ```
 #### Contract
 [EnjinCryptoItems_exp.sol](src/test/2026-08/EnjinCryptoItems_exp.sol)
+### 20260825 FHToken - sell-tax reserve mismatch via premature sync()
+### Lost: 19,999.018106552928530404 USDT (~$20K)
+```sh
+forge test --contracts src/test/2026-08/FHToken_exp.sol --evm-version cancun -vvv
+```
+#### Contract
+[FHToken_exp.sol](src/test/2026-08/FHToken_exp.sol)
 ### 20260823 ArrakisGUNI - Uniswap V3 spot-price manipulation of vault mint/burn
 ### Lost: ~2.9414 ETH net attacker surplus (Arrakis V1 / G-UNI ENS-WETH vault)
 ```sh
@@ -2086,6 +2099,13 @@ forge test --contracts src/test/2026-08/ArrakisGUNI_exp.sol -vvv
 ```
 #### Contract
 [ArrakisGUNI_exp.sol](src/test/2026-08/ArrakisGUNI_exp.sol)
+### 20260823 TermFinance - Governance capture via thinly-wrapped Aragon voting power
+### Lost: 2,841.743535791961701401 WETH (attacker net gain, ETH meta-vault)
+```sh
+forge test --contracts src/test/2026-08/TermFinance_exp.sol -vvv
+```
+#### Contract
+[TermFinance_exp.sol](src/test/2026-08/TermFinance_exp.sol)
 ### 20260822 SandboxOFT - LayerZero delegate hijack via approveAndCall
 ### Lost: 10,000,000 SAND minted unbacked (~$517,170 face value, one of 400+ repeated txs in an ongoing campaign)
 ```sh
@@ -2114,6 +2134,13 @@ forge test --contracts src/test/2026-08/UnistreetLaunchpad_exp.sol -vvv
 ```
 #### Contract
 [UnistreetLaunchpad_exp.sol](src/test/2026-08/UnistreetLaunchpad_exp.sol)
+### 20260805 StrongBlock - governance takeover of an abandoned Governor
+### Lost: 32,695.761681 STRONG + 383,447.167299 STRNGR (~$72K)
+```sh
+forge test --contracts src/test/2026-08/StrongBlock_exp.sol -vvv
+```
+#### Contract
+[StrongBlock_exp.sol](src/test/2026-08/StrongBlock_exp.sol)
 ### 20260803 AIC - pair skim / reserve-mismatch exploit, flash-swap leveraged
 ### Lost: ~32.36 BNB (~$21.5K)
 ```sh
